@@ -1,20 +1,583 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Souss-Massa 2024</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Examen EFM Laravel Souss Massa 2024</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2.5rem auto;
+            padding: 2.5rem;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        .header-section {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            border-bottom: 3px solid #6366f1; /* Indigo-500 */
+            padding-bottom: 1.5rem;
+        }
+        .header-section h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #4338ca; /* Indigo-700 */
+            margin-bottom: 0.5rem;
+        }
+        .header-section p {
+            font-size: 1.1rem;
+            color: #4b5563; /* Gray-700 */
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1f2937; /* Gray-900 */
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e5e7eb; /* Gray-200 */
+            padding-bottom: 0.75rem;
+        }
+        .question-block {
+            background-color: #f0f9ff; /* Sky-50 */
+            border-left: 5px solid #0ea5e9; /* Sky-500 */
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        .question-text {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: #1f2937;
+            margin-bottom: 0.8rem;
+        }
+        .answer-text {
+            font-size: 1rem;
+            color: #4b5563;
+            margin-top: 1rem;
+            background-color: #e0f2fe; /* Light blue for answers */
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #bfdbfe; /* Blue-200 */
+        }
+        .code-snippet {
+            background-color: #1f2937; /* Dark gray for code */
+            color: #f9fafb; /* Light text */
+            padding: 1.2rem;
+            border-radius: 8px;
+            font-family: 'Fira Code', monospace;
+            overflow-x: auto;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #d1d5db; /* Gray-300 */
+            color: #6b7280; /* Gray-500 */
+            font-size: 0.9rem;
+        }
+        .list-style-none {
+            list-style-type: none;
+            padding-left: 0;
+        }
+    </style>
 </head>
-<body>
-    <div class="container mt-4">
-        <h2>Souss-Massa Regional Exam 2024</h2>
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Laravel Development Exam</h5>
-                <p class="card-text">This section contains the Laravel development exam for the Souss-Massa region from 2024.</p>
+<body class="p-6">
+    <div class="container">
+        <header class="header-section">
+            <h1>Examen de Fin de Module Régional N°205</h1>
+            <p>&lt;&lt;&lt;&lt; Développement back-end &gt;&gt;&gt;&gt;</p>
+            <p>Année 2023/2024</p>
+            <p>Filière: DEVOWFS | Niveau: TS | Durée: 2h30</p>
+            <p class="font-semibold mt-2">Épreuve: Théorique (variante 1) | Barème: /40</p>
+        </header>
+
+        <section>
+            <h2 class="section-title">Partie I: (6 points)</h2>
+
+            <!-- Question 1 -->
+            <div class="question-block">
+                <p class="question-text">1. Donnez les commandes permettant de:</p>
+                <ul class="list-disc list-inside ml-4">
+                    <li>a. Lister tous les routes.</li>
+                    <li>b. Exécuter une migration.</li>
+                    <li>c. Créer un nouveau projet Laravel.</li>
+                    <li>d. Lancer le serveur Laravel.</li>
+                </ul>
+                <div class="answer-text">
+                    <p>a. <code>php artisan route:list</code></p>
+                    <p>b. <code>php artisan migrate</code></p>
+                    <p>c. <code>composer create-project --prefer-dist laravel/laravel nom_du_projet</code></p>
+                    <p>d. <code>php artisan serve</code></p>
+                </div>
             </div>
-        </div>
+
+            <!-- Question 2 -->
+            <div class="question-block">
+                <p class="question-text">2. Qu'est-ce qu'un middleware dans Laravel ?</p>
+                <div class="answer-text">
+                    <p>Un middleware est un mécanisme qui permet de filtrer les requêtes HTTP entrant dans l'application Laravel. Il peut exécuter des tâches avant ou après le traitement d'une requête, comme l'authentification, la journalisation, la gestion des sessions, la vérification des permissions, etc.</p>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-block">
+                <p class="question-text">3. C'est quoi le rôle de Controller dans le MVC Laravel?</p>
+                <div class="answer-text">
+                    <p>Dans le modèle MVC (Model-View-Controller) de Laravel, le rôle du Contrôleur est de gérer la logique métier de l'application. Il reçoit les requêtes de l'utilisateur, interagit avec les Modèles (pour les données) et renvoie une réponse via les Vues (pour l'affichage). Il agit comme un intermédiaire entre le Modèle et la Vue.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Partie II: (34 points)</h2>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mb-6 rounded-md">
+                <p class="font-bold">Soit les deux tables suivantes :</p>
+                <ul class="list-disc list-inside mt-2 ml-4">
+                    <li><code>Categorie</code> (<code>id</code>, <code>NomCategorie</code>, <code>create_at</code>, <code>update_at</code>)</li>
+                    <li><code>Produit</code> (<code>id</code>, <code>NomProduit</code>, <code>DescriptionP</code>, <code>#Categorie_id</code>, <code>create_at</code>, <code>update_at</code>)</li>
+                </ul>
+            </div>
+
+            <!-- Question 1 (Partie II) -->
+            <div class="question-block">
+                <p class="question-text">1. Donner les commandes qui permet de créer les deux Modèles: Catégorie et Produit.</p>
+                <div class="answer-text">
+                    <p>Pour le modèle <code>Categorie</code> : <code>php artisan make:model Categorie</code></p>
+                    <p>Pour le modèle <code>Produit</code> : <code>php artisan make:model Produit</code></p>
+                </div>
+            </div>
+
+            <!-- Question 2 (Partie II) -->
+            <div class="question-block">
+                <p class="question-text">2. Ajouter le code dans le fichier Modèle Produit sachant que le produit appartient à une seule catégorie:</p>
+                <pre class="code-snippet">
+class Produit extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['NomProduit', 'DescriptionP', 'Categorie_id'];
+
+    public function categorie()
+    {
+        return $this->belongsTo(Categorie::class, 'Categorie_id');
+    }
+}
+                </pre>
+            </div>
+
+            <!-- Question 3 (Partie II) -->
+            <div class="question-block">
+                <p class="question-text">3. Ajouter le code dans le fichier Modèle Categorie sachant qu'une catégorie peut avoir plusieurs produits</p>
+                <pre class="code-snippet">
+class Categorie extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['NomCategorie'];
+
+    public function produits()
+    {
+        return $this->hasMany(Produit::class, 'Categorie_id');
+    }
+}
+                </pre>
+            </div>
+
+            <!-- Question 4 (Partie II) -->
+            <div class="question-block">
+                <p class="question-text">4. Donner la commande qui va permettre de créer le fichier de migration categories</p>
+                <div class="answer-text">
+                    <p><code>php artisan make:migration create_categories_table</code></p>
+                </div>
+            </div>
+
+            <!-- Question 5 (Partie II) -->
+            <div class="question-block">
+                <p class="question-text">5. Donner le code de la fonction <code>up()</code> du migration <code>create_categories_table</code>.</p>
+                <pre class="code-snippet">
+// Dans database/migrations/..._create_categories_table.php
+public function up()
+{
+    Schema::create('categories', function (Blueprint $table) {
+        $table->id();
+        $table->string('NomCategorie');
+        $table->timestamps();
+    });
+}
+                </pre>
+            </div>
+
+            <!-- Question 6 (Partie II) -->
+            <div class="question-block">
+                <p class="question-text">6. Donner la commande qui va permettre de créer le fichier de migration produits.</p>
+                <div class="answer-text">
+                    <p><code>php artisan make:migration create_produits_table</code></p>
+                </div>
+            </div>
+
+            <!-- Question 7 (Partie II) -->
+            <div class="question-block">
+                <p class="question-text">7. Donner le code de la fonction <code>up()</code> du migration <code>create_produits_table</code>.</p>
+                <pre class="code-snippet">
+// Dans database/migrations/..._create_produits_table.php
+public function up()
+{
+    Schema::create('produits', function (Blueprint $table) {
+        $table->id();
+        $table->string('NomProduit');
+        $table->text('DescriptionP')->nullable();
+        $table->foreignId('Categorie_id')->constrained('categories')->onDelete('cascade');
+        $table->timestamps();
+    });
+}
+                </pre>
+            </div>
+
+            <!-- Question 8 (Partie II) -->
+            <div class="question-block">
+                <p class="question-text">8. Donner la commande qui va permettre de créer le fichier seeder <code>categorieTableSeeder</code> et peupler votre seeder avec deux catégories de votre choix.</p>
+                <div class="answer-text">
+                    <p>Commande : <code>php artisan make:seeder CategorieTableSeeder</code></p>
+                    <p>Contenu de <code>database/seeders/CategorieTableSeeder.php</code> :</p>
+                    <pre class="code-snippet">
+use Illuminate\Database\Seeder;
+use App\Models\Categorie;
+
+class CategorieTableSeeder extends Seeder
+{
+    public function run()
+    {
+        Categorie::create(['NomCategorie' => 'Électroménager']);
+        Categorie::create(['NomCategorie' => 'Informatique']);
+    }
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Question 9 (Partie II) -->
+            <div class="question-block">
+                <p class="question-text">9. Donner la commande qui va permettre de créer le fichier seeder <code>produitTableSeeder</code> et peupler votre seeder avec deux produits de votre choix.</p>
+                <div class="answer-text">
+                    <p>Commande : <code>php artisan make:seeder ProduitTableSeeder</code></p>
+                    <p>Contenu de <code>database/seeders/ProduitTableSeeder.php</code> :</p>
+                    <pre class="code-snippet">
+use Illuminate\Database\Seeder;
+use App\Models\Produit;
+use App\Models\Categorie;
+
+class ProduitTableSeeder extends Seeder
+{
+    public function run()
+    {
+        $electromenager = Categorie::where('NomCategorie', 'Électroménager')->first();
+        $informatique = Categorie::where('NomCategorie', 'Informatique')->first();
+
+        Produit::create([
+            'NomProduit' => 'Réfrigérateur XYZ',
+            'DescriptionP' => 'Réfrigérateur combiné, classe A+++',
+            'Categorie_id' => $electromenager->id
+        ]);
+
+        Produit::create([
+            'NomProduit' => 'Ordinateur Portable ABC',
+            'DescriptionP' => 'PC portable, 16Go RAM, 512Go SSD',
+            'Categorie_id' => $informatique->id
+        ]);
+    }
+}
+                    </pre>
+                    <p>N'oubliez pas d'appeler ces seeders dans <code>database/seeders/DatabaseSeeder.php</code> :</p>
+                    <pre class="code-snippet">
+public function run()
+{
+    $this->call([
+        CategorieTableSeeder::class,
+        ProduitTableSeeder::class,
+    ]);
+}
+                    </pre>
+                    <p>Et d'exécuter : <code>php artisan db:seed</code></p>
+                </div>
+            </div>
+
+            <!-- Question 10 (Partie II) -->
+            <div class="question-block">
+                <p class="question-text">10. Donnez les commandes Artisan permettant de créer les deux contrôleurs appelés: <code>ProduitController</code> et <code>CategorieController</code></p>
+                <div class="answer-text">
+                    <p>Pour <code>ProduitController</code> : <code>php artisan make:controller ProduitController --resource</code></p>
+                    <p>Pour <code>CategorieController</code> : <code>php artisan make:controller CategorieController --resource</code></p>
+                </div>
+            </div>
+
+            <!-- Question 11 (Partie II) -->
+            <div class="question-block">
+                <p class="question-text">11. Donner le code qui va permettre de créer les routes suivantes dans votre fichier web.php:</p>
+                <div class="overflow-x-auto mb-4">
+                    <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <thead>
+                            <tr class="bg-gray-100 border-b">
+                                <th class="py-2 px-4 text-left text-sm font-semibold text-gray-700">URL</th>
+                                <th class="py-2 px-4 text-left text-sm font-semibold text-gray-700">Verbe Http</th>
+                                <th class="py-2 px-4 text-left text-sm font-semibold text-gray-700">Contrôleur</th>
+                                <th class="py-2 px-4 text-left text-sm font-semibold text-gray-700">Méthode</th>
+                                <th class="py-2 px-4 text-left text-sm font-semibold text-gray-700">Nom</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b">
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>/showProd</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>get</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>ProduitController</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>index</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>afficher</code></td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>/nouveau</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>get</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>ProduitController</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>Nouveau_produit</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"></td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>/creation</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>post</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>ProduitController</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>Creation_produit</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>creationProd</code></td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>/edition/{id}</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>get</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>ProduitController</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>Edition_produit</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"></td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>/edit/{id}</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>put</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>ProduitController</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>Edit_produit</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"></td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>/delete/{id}</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>delete</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>ProduitController</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>Delete_produit</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"></td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>/categorie/{id}</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>get</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>CategorieController</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"><code>Produits_Categorie</code></td>
+                                <td class="py-2 px-4 text-sm text-gray-700"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+// Dans routes/web.php
+use App\Http\Controllers\ProduitController;
+use App\Http\Controllers\CategorieController;
+
+Route::get('/showProd', [ProduitController::class, 'index'])->name('afficher');
+Route::get('/nouveau', [ProduitController::class, 'Nouveau_produit']);
+Route::post('/creation', [ProduitController::class, 'Creation_produit'])->name('creationProd');
+Route::get('/edition/{id}', [ProduitController::class, 'Edition_produit']);
+Route::put('/edit/{id}', [ProduitController::class, 'Edit_produit']);
+Route::delete('/delete/{id}', [ProduitController::class, 'Delete_produit']);
+Route::get('/categorie/{id}', [CategorieController::class, 'Produits_Categorie']);
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Question 12 (Partie II) -->
+            <div class="question-block">
+                <p class="question-text">12. Développer la méthode <code>index()</code> qui affiche la vue suivante: <code>showprod.blade.php</code></p>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+// Dans app/Http/Controllers/ProduitController.php
+use App\Models\Produit; // Assurez-vous d'importer le modèle Produit
+
+public function index()
+{
+    $produits = Produit::all(); // Ou avec pagination: Produit::paginate(10);
+    return view('showprod', compact('produits'));
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Question 13 (Partie II) -->
+            <div class="question-block">
+                <p class="question-text">13. Compléter le code de la vue <code>showprod.blade.php</code></p>
+                <pre class="code-snippet">
+@extends('layouts.master')
+
+@section('header')
+    {{-- Votre code pour l'en-tête ici --}}
+    &lt;h1 class="text-3xl font-bold mb-4"&gt;Liste des Produits&lt;/h1&gt;
+@stop
+
+@section('contenu')
+    &lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"&gt;
+        @foreach($produits as $produit)
+            &lt;div class="bg-white p-6 rounded-lg shadow-lg"&gt;
+                &lt;h2 class="text-xl font-semibold mb-2"&gt;{{ $produit->NomProduit }}&lt;/h2&gt;
+                &lt;p class="text-gray-700 mb-4"&gt;{{ $produit->DescriptionP }}&lt;/p&gt;
+                &lt;p class="text-sm text-gray-500"&gt;Catégorie: {{ $produit->categorie->NomCategorie ?? 'N/A' }}&lt;/p&gt;
+                &lt;div class="mt-4 flex space-x-2"&gt;
+                    &lt;a href="/edition/{{ $produit->id }}" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors"&gt;Modifier&lt;/a&gt;
+                    &lt;form action="/delete/{{ $produit->id }}" method="POST"&gt;
+                        @csrf
+                        @method('DELETE')
+                        &lt;button type="submit" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md transition-colors"&gt;Supprimer&lt;/button&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        @endforeach
+    &lt;/div&gt;
+@stop
+                </pre>
+            </div>
+
+            <!-- Question 14 (Partie II) -->
+            <div class="question-block">
+                <p class="question-text">14. Développer les méthodes suivantes:</p>
+                <ul class="list-disc list-inside ml-4">
+                    <li>a. <code>Nouveau_produit</code>: afficher la vue <code>new.blade.php</code> pour la création produit.</li>
+                    <li>b. <code>Creation_produit</code>: pour ajouter un produit.</li>
+                    <li>c. <code>Edition_produit</code>: afficher la vue <code>edit.blade.php</code> pour éditer produit.</li>
+                    <li>d. <code>Edit_produit</code>: pour modifier le produit.</li>
+                    <li>e. <code>Delete_produit</code>: pour supprimer le produit.</li>
+                </ul>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+// Dans app/Http/Controllers/ProduitController.php
+use Illuminate\Http\Request;
+use App\Models\Produit;
+use App\Models\Categorie;
+
+// a. Afficher le formulaire de création
+public function Nouveau_produit()
+{
+    $categories = Categorie::all(); // Pour le sélecteur de catégorie
+    return view('new', compact('categories'));
+}
+
+// b. Gérer l'ajout d'un nouveau produit
+public function Creation_produit(Request $request)
+{
+    $request->validate([
+        'NomProduit' => 'required|string|max:255',
+        'DescriptionP' => 'nullable|string',
+        'Categorie_id' => 'required|exists:categories,id',
+    ]);
+
+    Produit::create($request->all());
+
+    return redirect()->route('afficher')->with('success', 'Produit ajouté avec succès!');
+}
+
+// c. Afficher le formulaire d'édition
+public function Edition_produit($id)
+{
+    $produit = Produit::findOrFail($id);
+    $categories = Categorie::all();
+    return view('edit', compact('produit', 'categories'));
+}
+
+// d. Gérer la modification d'un produit
+public function Edit_produit(Request $request, $id)
+{
+    $request->validate([
+        'NomProduit' => 'required|string|max:255',
+        'DescriptionP' => 'nullable|string',
+        'Categorie_id' => 'required|exists:categories,id',
+    ]);
+
+    $produit = Produit::findOrFail($id);
+    $produit->update($request->all());
+
+    return redirect()->route('afficher')->with('success', 'Produit mis à jour avec succès!');
+}
+
+// e. Gérer la suppression d'un produit
+public function Delete_produit($id)
+{
+    $produit = Produit::findOrFail($id);
+    $produit->delete();
+
+    return redirect()->route('afficher')->with('success', 'Produit supprimé avec succès!');
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Question 15 (Partie II) -->
+            <div class="question-block">
+                <p class="question-text">15. En cliquant sur une catégorie dans la vue <code>showprod.blade.php</code> on affiche la liste des produits de cette catégorie, Donner le code de la méthode <code>ProduitsCategorie</code>.</p>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+// Dans app/Http/Controllers/CategorieController.php
+use App\Models\Categorie;
+
+public function Produits_Categorie($id)
+{
+    $categorie = Categorie::with('produits')->findOrFail($id);
+    $produits = $categorie->produits; // Récupère les produits de cette catégorie
+    return view('Categprod', compact('categorie', 'produits'));
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Question 16 (Partie II) -->
+            <div class="question-block">
+                <p class="question-text">16. Compléter le code de la vue <code>Categprod.blade.php</code></p>
+                <pre class="code-snippet">
+@extends('layouts.master')
+
+@section('header')
+    &lt;h1 class="text-3xl font-bold mb-4"&gt;Produits de la catégorie: {{ $categorie->NomCategorie }}&lt;/h1&gt;
+@stop
+
+@section('contenu')
+    &lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"&gt;
+        @forelse($produits as $produit)
+            &lt;div class="bg-white p-6 rounded-lg shadow-lg"&gt;
+                &lt;h2 class="text-xl font-semibold mb-2"&gt;{{ $produit->NomProduit }}&lt;/h2&gt;
+                &lt;p class="text-gray-700 mb-4"&gt;{{ $produit->DescriptionP }}&lt;/p&gt;
+                &lt;!-- Vous pouvez ajouter plus de détails ou des actions ici --&gt;
+            &lt;/div&gt;
+        @empty
+            &lt;p class="text-gray-600"&gt;Aucun produit trouvé pour cette catégorie.&lt;/p&gt;
+        @endforelse
+    &lt;/div&gt;
+@stop
+                </pre>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2024 Examen EFM Laravel Souss Massa. Tous droits réservés.</p>
+        </footer>
     </div>
 </body>
-</html> 
+</html>
