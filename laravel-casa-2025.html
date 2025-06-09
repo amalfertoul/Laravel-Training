@@ -1,20 +1,646 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laravel Casa 2025</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Examen EFM Laravel Casablanca 2025</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray */
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 960px;
+            margin: 2.5rem auto;
+            padding: 2.5rem;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        .header-section {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            border-bottom: 3px solid #10b981; /* Emerald-500 */
+            padding-bottom: 1.5rem;
+        }
+        .header-section h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #047857; /* Emerald-700 */
+            margin-bottom: 0.5rem;
+        }
+        .header-section p {
+            font-size: 1.1rem;
+            color: #4b5563; /* Gray-700 */
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1f2937; /* Gray-900 */
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e5e7eb; /* Gray-200 */
+            padding-bottom: 0.75rem;
+        }
+        .question-block {
+            background-color: #ecfdf5; /* Emerald-50 */
+            border-left: 5px solid #10b981; /* Emerald-500 */
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        .question-text {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: #1f2937;
+            margin-bottom: 0.8rem;
+        }
+        .answer-text {
+            font-size: 1rem;
+            color: #4b5563;
+            margin-top: 1rem;
+            background-color: #d1fae5; /* Emerald-100 */
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #a7f3d0; /* Emerald-200 */
+        }
+        .code-snippet {
+            background-color: #1f2937; /* Dark gray for code */
+            color: #f9fafb; /* Light text */
+            padding: 1.2rem;
+            border-radius: 8px;
+            font-family: 'Fira Code', monospace;
+            overflow-x: auto;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #d1d5db; /* Gray-300 */
+            color: #6b7280; /* Gray-500 */
+            font-size: 0.9rem;
+        }
+        .list-style-none {
+            list-style-type: none;
+            padding-left: 0;
+        }
+    </style>
 </head>
-<body>
-    <div class="container mt-4">
-        <h2>Laravel Casa Regional Exam 2025</h2>
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Laravel Development Exam</h5>
-                <p class="card-text">This section contains the Laravel development exam for the Casa region from 2025.</p>
+<body class="p-6">
+    <div class="container">
+        <header class="header-section">
+            <h1>EVALUATION DE FIN DE MODULE REGIONALE</h1>
+            <p>AU TITRE DE L'ANNEE: 2024-2025</p>
+            <p>Intitulé du module: Développement Back-End | Filière DEVOWFS | Niveau: TS</p>
+            <p>Date d'évaluation: 28/04/2025 | Durée: 2H30 | Barème: /40 | Variante 2</p>
+        </header>
+
+        <section>
+            <h2 class="section-title">Partie Théorique (Questions de cours) (10pts)</h2>
+
+            <!-- Question 1 -->
+            <div class="question-block">
+                <p class="question-text">1. Qu'est-ce qu'un middleware dans Laravel ? Donnez un exemple d'utilisation. (2 pts)</p>
+                <div class="answer-text">
+                    <p>Un middleware est un mécanisme qui permet de filtrer les requêtes HTTP entrant dans votre application Laravel. Il peut exécuter des tâches avant ou après le traitement d'une requête HTTP. Par exemple, le middleware <code>auth</code> vérifie si l'utilisateur est authentifié avant d'autoriser l'accès à certaines routes. S'il n'est pas authentifié, il peut le rediriger vers la page de connexion.</p>
+                </div>
             </div>
-        </div>
+
+            <!-- Question 2 -->
+            <div class="question-block">
+                <p class="question-text">2. Quelle est l'utilité du fichier .env dans une application Laravel ? Citez deux types de variables qu'on y trouve (2 pts)</p>
+                <div class="answer-text">
+                    <p>Le fichier <code>.env</code> est utilisé pour stocker les variables de configuration spécifiques à l'environnement de votre application (développement, production, etc.). Il permet de séparer les configurations sensibles ou spécifiques de l'environnement du code source, facilitant le déploiement. </p>
+                    <p>Deux types de variables qu'on y trouve :</p>
+                    <ul class="list-disc list-inside ml-4">
+                        <li>Les informations de connexion à la base de données (<code>DB_CONNECTION</code>, <code>DB_HOST</code>, <code>DB_DATABASE</code>, <code>DB_USERNAME</code>, <code>DB_PASSWORD</code>).</li>
+                        <li>Les clés d'API ou secrets de services externes (ex: <code>MAIL_MAILER</code>, <code>MAIL_HOST</code>, <code>AWS_ACCESS_KEY_ID</code>, <code>STRIPE_SECRET</code>).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-block">
+                <p class="question-text">3. Qu'est-ce qu'un objet Request dans Laravel? Donnez deux méthodes utiles de l'objet Request (2 pts)</p>
+                <div class="answer-text">
+                    <p>L'objet <code>Request</code> dans Laravel est une instance de la classe <code>Illuminate\Http\Request</code>. Il encapsule toutes les informations de la requête HTTP entrante dans l'application, y compris les données de formulaire, les en-têtes HTTP, les cookies, et les fichiers téléchargés.</p>
+                    <p>Deux méthodes utiles :</p>
+                    <ul class="list-disc list-inside ml-4">
+                        <li><code>$request->input('nom_champ')</code> : Permet de récupérer la valeur d'un champ de formulaire via GET ou POST.</li>
+                        <li><code>$request->all()</code> : Retourne toutes les données de la requête sous forme de tableau associatif.</li>
+                        <li><code>$request->has('nom_champ')</code> : Vérifie si un champ spécifique est présent dans la requête.</li>
+                        <li><code>$request->file('nom_champ_fichier')</code> : Permet d'accéder au fichier téléchargé.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-block">
+                <p class="question-text">4. Expliquez les étapes nécessaires pour installer un kit de développement Laravel Breeze ou Laravel UI. (2 pts)</p>
+                <div class="answer-text">
+                    <p>Pour installer Laravel Breeze (pour Laravel UI, les étapes sont similaires mais avec des paquets différents) :</p>
+                    <ol class="list-decimal list-inside ml-4">
+                        <li>Assurez-vous d'avoir un projet Laravel fraîchement installé.</li>
+                        <li>Installez Laravel Breeze via Composer: <pre class="code-snippet">composer require laravel/breeze --dev</pre></li>
+                        <li>Exécutez la commande Artisan pour publier les fichiers de Breeze: <pre class="code-snippet">php artisan breeze:install</pre> (Vous serez invité à choisir votre stack frontend, ex: Blade, React, Vue, ou Livewire).</li>
+                        <li>Installez les dépendances NPM et compilez les assets: <pre class="code-snippet">npm install && npm run dev</pre></li>
+                        <li>Exécutez les migrations de la base de données pour créer les tables d'authentification: <pre class="code-snippet">php artisan migrate</pre></li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-block">
+                <p class="question-text">5. Qu'est-ce que WordPress? Donnez deux différences principales entre WordPress et Laravel. (2 pts)</p>
+                <div class="answer-text">
+                    <p><strong>WordPress</strong> est un système de gestion de contenu (CMS) open-source basé sur PHP et MySQL. Il est principalement utilisé pour créer des sites web, des blogs et des boutiques en ligne sans avoir besoin de coder, grâce à son interface conviviale et ses nombreux thèmes et plugins.</p>
+                    <p>Deux différences principales :</p>
+                    <ul class="list-disc list-inside ml-4">
+                        <li>
+                            <strong>Nature et Flexibilité :</strong>
+                            <ul class="list-circle list-inside ml-4">
+                                <li><strong>WordPress :</strong> Est un CMS "prêt à l'emploi". Il est conçu pour la création rapide de sites avec une personnalisation via des thèmes et des plugins. Moins de flexibilité pour des applications web complexes sur mesure.</li>
+                                <li><strong>Laravel :</strong> Est un framework de développement web. Il fournit une structure et des outils pour construire des applications web personnalisées de A à Z. Offre une flexibilité maximale pour des projets complexes et spécifiques.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Public Cible et Compétences Requises :</strong>
+                            <ul class="list-circle list-inside ml-4">
+                                <li><strong>WordPress :</strong> S'adresse aux utilisateurs qui n'ont pas ou peu de compétences en programmation, ou qui souhaitent un déploiement rapide.</li>
+                                <li><strong>Laravel :</strong> S'adresse principalement aux développeurs. Il nécessite des connaissances en PHP, en concepts de développement web (MVC, ORM), et en bases de données.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Partie Pratique - Développement d'une application de gestion des événements (30 points)</h2>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mb-6 rounded-md">
+                <p class="font-bold">Développez une application nommée "EventMaster" qui permet aux utilisateurs de créer et consulter des événements. Chaque utilisateur peut ajouter des événements personnels, qui seront affichés selon leur date.</p>
+                <p class="font-bold mt-2">Spécifications Fonctionnelles :</p>
+            </div>
+
+            <!-- Q1 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">1. Créez le modèle <code>Evenement</code> avec sa migration, un contrôleur de ressource et un seeder. (2 pts)</p>
+                <div class="answer-text">
+                    <p>Commandes:</p>
+                    <pre class="code-snippet">
+php artisan make:model Evenement -m
+php artisan make:controller EvenementController --resource
+php artisan make:seeder EvenementSeeder
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Q2 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">2. Modifiez la méthode <code>up()</code> du fichier de migration <code>create_evenements_table.php</code> en ajoutant une clé étrangère <code>user_id</code>. (2 pts)</p>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+// Dans database/migrations/..._create_evenements_table.php
+public function up()
+{
+    Schema::create('evenements', function (Blueprint $table) {
+        $table->id();
+        $table->string('titre');
+        $table->text('description');
+        $table->string('lieu');
+        $table->dateTime('date_debut');
+        $table->dateTime('date_fin');
+        $table->string('image_path')->nullable(); // Pour l'upload d'image
+        $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Clé étrangère
+        $table->timestamps();
+    });
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Q3 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">3. Configurez le model <code>Evenement</code>:</p>
+                <ul class="list-disc list-inside ml-4">
+                    <li>Tous les champs doivent être fillable.</li>
+                    <li>Ajouter la relation appropriée avec le model <code>User</code> (2 pts)</li>
+                </ul>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+// Dans app/Models/Evenement.php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Evenement extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'titre',
+        'description',
+        'lieu',
+        'date_debut',
+        'date_fin',
+        'image_path',
+        'user_id'
+    ];
+
+    // Relation avec le modèle User (un événement appartient à un utilisateur)
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Q4 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">4. Configurez le model <code>User</code> pour ajouter la relation avec <code>Evenement</code> (2 pts)</p>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+// Dans app/Models/User.php
+namespace App\Models;
+
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
+
+class User extends Authenticatable
+{
+    use HasApiTokens, HasFactory, Notifiable;
+
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+    ];
+
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
+
+    // Relation avec le modèle Evenement (un utilisateur peut avoir plusieurs événements)
+    public function evenements()
+    {
+        return $this->hasMany(Evenement::class);
+    }
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Q5 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">5. Créez une classe <code>EvenementRequest</code> et définissez les règles de validation pour les champs du formulaire de création. (2 pts)</p>
+                <div class="answer-text">
+                    <p>Commande : <code>php artisan make:request EvenementRequest</code></p>
+                    <pre class="code-snippet">
+// Dans app/Http/Requests/EvenementRequest.php
+namespace App\Http\Requests;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class EvenementRequest extends FormRequest
+{
+    public function authorize()
+    {
+        // Autoriser tous les utilisateurs authentifiés à faire cette requête
+        return auth()->check();
+    }
+
+    public function rules()
+    {
+        return [
+            'titre' => 'required|string|max:255',
+            'description' => 'required|string',
+            'lieu' => 'required|string|max:255',
+            'date_debut' => 'required|date|after_or_equal:now',
+            'date_fin' => 'required|date|after_or_equal:date_debut',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // 2 Mo max
+        ];
+    }
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Q6 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">6. Configurez la méthode <code>index()</code> dans <code>EvenementController</code> pour afficher les événements paginées par 3, triées par date croissante. (2 pts)</p>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+// Dans app/Http/Controllers/EvenementController.php
+use App\Models\Evenement;
+
+public function index()
+{
+    // Récupérer les événements de l'utilisateur connecté, paginés et triés par date
+    $evenements = Evenement::where('user_id', auth()->id())
+                               ->orderBy('date_debut', 'asc')
+                               ->paginate(3);
+    return view('index', compact('evenements')); // Assurez-vous que votre vue s'appelle index.blade.php
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Q7 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">7. Implémentez la méthode <code>create()</code>. (2 pts)</p>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+// Dans app/Http/Controllers/EvenementController.php
+public function create()
+{
+    return view('create'); // Assurez-vous que votre vue s'appelle create.blade.php
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Q8 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">8. Implémentez la méthode <code>store()</code> pour:</p>
+                <ul class="list-disc list-inside ml-4">
+                    <li>Enregistrer l'événement dans la base</li>
+                    <li>Faire l'upload de l'image vers public/storage (4 pts)</li>
+                </ul>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+// Dans app/Http/Controllers/EvenementController.php
+use App\Http\Requests\EvenementRequest; // N'oubliez pas d'importer la requête
+use Illuminate\Support\Facades\Storage;
+
+public function store(EvenementRequest $request)
+{
+    $validatedData = $request->validated();
+
+    // Gestion de l'upload de l'image
+    if ($request->hasFile('image')) {
+        $imagePath = $request->file('image')->store('public/evenement_images');
+        $validatedData['image_path'] = Storage::url($imagePath); // Stocker l'URL public
+    }
+
+    // Ajouter l'ID de l'utilisateur connecté
+    $validatedData['user_id'] = auth()->id();
+
+    Evenement::create($validatedData);
+
+    return redirect()->route('evenement.index')->with('success', 'Événement créé avec succès!');
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Q9 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">9. Configurez le fichier web.php</p>
+                <ul class="list-disc list-inside ml-4">
+                    <li>La route index est publique</li>
+                    <li>Les routes create et store sont protégées par le middleware auth (2 pts)</li>
+                </ul>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+// Dans routes/web.php
+use App\Http\Controllers\EvenementController;
+use Illuminate\Support\Facades\Route;
+
+// Route index publique (n'importe qui peut la voir)
+Route::get('/', [EvenementController::class, 'index'])->name('evenement.index');
+
+// Groupe de routes protégées par le middleware 'auth'
+Route::middleware('auth')->group(function () {
+    Route::get('/evenements/create', [EvenementController::class, 'create'])->name('evenement.create');
+    Route::post('/evenements', [EvenementController::class, 'store'])->name('evenement.store');
+    // Ajoutez d'autres routes de ressource si nécessaire, mais en s'assurant qu'elles sont protégées
+    // Route::resource('evenements', EvenementController::class)->except(['index', 'show']);
+});
+
+// Pour la vue show d'un événement (peut être publique ou protégée selon le besoin)
+Route::get('/evenements/{evenement}', [EvenementController::class, 'show'])->name('evenement.show');
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Q10 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">10. Créez un layout <code>blade.php</code> avec un menu incluant des liens conditionnels via <code>@auth</code> et <code>@guest</code>. (2 pts)</p>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+&lt;!-- Dans resources/views/layouts/app.blade.php (ou master.blade.php) --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;@yield('title', 'EventMaster')&lt;/title&gt;
+    &lt;!-- Assurez-vous que Tailwind est inclus dans votre configuration Laravel ou ici --&gt;
+    &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body class="bg-gray-100 font-sans antialiased"&gt;
+    &lt;nav class="bg-white shadow-md p-4 flex justify-between items-center"&gt;
+        &lt;div class="text-xl font-bold text-gray-800"&gt;
+            &lt;a href="{{ url('/') }}"&gt;EventMaster&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;a href="{{ route('evenement.index') }}" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md"&gt;Accueil&lt;/a&gt;
+            @auth
+                &lt;a href="{{ route('evenement.create') }}" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md"&gt;Créer Événement&lt;/a&gt;
+                &lt;form action="{{ route('logout') }}" method="POST" class="inline"&gt;
+                    @csrf
+                    &lt;button type="submit" class="text-red-600 hover:text-red-800 px-3 py-2 rounded-md"&gt;Déconnexion&lt;/button&gt;
+                &lt;/form&gt;
+            @endauth
+            @guest
+                &lt;a href="{{ route('login') }}" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md"&gt;Connexion&lt;/a&gt;
+                &lt;a href="{{ route('register') }}" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md"&gt;Inscription&lt;/a&gt;
+            @endguest
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;main class="container mx-auto mt-8 p-6"&gt;
+        @if (session('success'))
+            &lt;div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert"&gt;
+                &lt;span class="block sm:inline"&gt;{{ session('success') }}&lt;/span&gt;
+            &lt;/div&gt;
+        @endif
+        @if (session('error'))
+            &lt;div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert"&gt;
+                &lt;span class="block sm:inline"&gt;{{ session('error') }}&lt;/span&gt;
+            &lt;/div&gt;
+        @endif
+
+        @yield('content')
+    &lt;/main&gt;
+
+    &lt;footer class="text-center mt-8 p-4 text-gray-500 text-sm border-t border-gray-300"&gt;
+        &copy; 2025 EventMaster. Tous droits réservés.
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Q11 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">11. Implémentez la vue <code>index.blade.php</code>. (4 pts)</p>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+&lt;!-- Dans resources/views/index.blade.php --&gt;
+@extends('layouts.app') {{-- Ou layouts.master selon votre nom de layout --}}
+
+@section('title', 'Liste des Événements')
+
+@section('content')
+    &lt;h1 class="text-3xl font-bold text-gray-800 mb-6"&gt;Mes Événements&lt;/h1&gt;
+
+    @forelse ($evenements as $evenement)
+        &lt;div class="bg-white p-6 rounded-lg shadow-lg mb-6 flex flex-col md:flex-row items-start md:items-center"&gt;
+            @if ($evenement->image_path)
+                &lt;img src="{{ $evenement->image_path }}" alt="Image de l'événement" class="w-full md:w-48 h-32 md:h-auto object-cover rounded-md mr-4 mb-4 md:mb-0"&gt;
+            @else
+                &lt;img src="https://placehold.co/192x128/e5e7eb/6b7280?text=No+Image" alt="Pas d'image" class="w-full md:w-48 h-32 md:h-auto object-cover rounded-md mr-4 mb-4 md:mb-0"&gt;
+            @endif
+            &lt;div class="flex-grow"&gt;
+                &lt;h2 class="text-2xl font-semibold text-gray-900 mb-2"&gt;{{ $evenement->titre }}&lt;/h2&gt;
+                &lt;p class="text-gray-700 mb-2"&gt;&lt;strong&gt;Lieu:&lt;/strong&gt; {{ $evenement->lieu }}&lt;/p&gt;
+                &lt;p class="text-gray-600 text-sm mb-3"&gt;
+                    &lt;strong&gt;Du:&lt;/strong&gt; {{ \Carbon\Carbon::parse($evenement->date_debut)->format('d/m/Y H:i') }}
+                    &lt;strong&gt;Au:&lt;/strong&gt; {{ \Carbon\Carbon::parse($evenement->date_fin)->format('d/m/Y H:i') }}
+                &lt;/p&gt;
+                &lt;p class="text-gray-700"&gt;{{ Str::limit($evenement->description, 100) }}&lt;/p&gt;
+                &lt;div class="mt-4 flex space-x-2"&gt;
+                    &lt;a href="{{ route('evenement.show', $evenement->id) }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md transition-colors duration-200"&gt;Voir Détails&lt;/a&gt;
+                    @auth
+                        @if (auth()->id() == $evenement->user_id)
+                            &lt;a href="{{ route('evenement.edit', $evenement->id) }}" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-md transition-colors duration-200"&gt;Modifier&lt;/a&gt;
+                            &lt;form action="{{ route('evenement.destroy', $evenement->id) }}" method="POST" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cet événement?');"&gt;
+                                @csrf
+                                @method('DELETE')
+                                &lt;button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-md transition-colors duration-200"&gt;Supprimer&lt;/button&gt;
+                            &lt;/form&gt;
+                        @endif
+                    @endauth
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    @empty
+        &lt;div class="bg-white p-6 rounded-lg shadow-lg text-center"&gt;
+            &lt;p class="text-gray-600 text-lg"&gt;Aucun événement trouvé. &lt;a href="{{ route('evenement.create') }}" class="text-blue-500 hover:underline"&gt;Créez-en un maintenant!&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    @endforelse
+
+    &lt;div class="mt-8"&gt;
+        {{ $evenements->links() }}
+    &lt;/div&gt;
+@endsection
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Q12 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">12. Implémentez la vue <code>create.blade.php</code> avec gestion des messages d'erreur (4 pts)</p>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+&lt;!-- Dans resources/views/create.blade.php --&gt;
+@extends('layouts.app') {{-- Ou layouts.master --}}
+
+@section('title', 'Créer un Nouvel Événement')
+
+@section('content')
+    &lt;h1 class="text-3xl font-bold text-gray-800 mb-6"&gt;Créer un Nouvel Événement&lt;/h1&gt;
+
+    &lt;form action="{{ route('evenement.store') }}" method="POST" enctype="multipart/form-data" class="bg-white p-8 rounded-lg shadow-lg"&gt;
+        @csrf
+
+        &lt;div class="mb-4"&gt;
+            &lt;label for="titre" class="block text-gray-700 text-sm font-bold mb-2"&gt;Titre de l'événement:&lt;/label&gt;
+            &lt;input type="text" name="titre" id="titre" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('titre') border-red-500 @enderror" value="{{ old('titre') }}" required&gt;
+            @error('titre')
+                &lt;p class="text-red-500 text-xs italic mt-2"&gt;{{ $message }}&lt;/p&gt;
+            @enderror
+        &lt;/div&gt;
+
+        &lt;div class="mb-4"&gt;
+            &lt;label for="description" class="block text-gray-700 text-sm font-bold mb-2"&gt;Description:&lt;/label&gt;
+            &lt;textarea name="description" id="description" rows="5" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('description') border-red-500 @enderror" required&gt;{{ old('description') }}&lt;/textarea&gt;
+            @error('description')
+                &lt;p class="text-red-500 text-xs italic mt-2"&gt;{{ $message }}&lt;/p&gt;
+            @enderror
+        &lt;/div&gt;
+
+        &lt;div class="mb-4"&gt;
+            &lt;label for="lieu" class="block text-gray-700 text-sm font-bold mb-2"&gt;Lieu:&lt;/label&gt;
+            &lt;input type="text" name="lieu" id="lieu" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('lieu') border-red-500 @enderror" value="{{ old('lieu') }}" required&gt;
+            @error('lieu')
+                &lt;p class="text-red-500 text-xs italic mt-2"&gt;{{ $message }}&lt;/p&gt;
+            @enderror
+        &lt;/div&gt;
+
+        &lt;div class="mb-4"&gt;
+            &lt;label for="date_debut" class="block text-gray-700 text-sm font-bold mb-2"&gt;Date Début:&lt;/label&gt;
+            &lt;input type="datetime-local" name="date_debut" id="date_debut" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('date_debut') border-red-500 @enderror" value="{{ old('date_debut') }}" required&gt;
+            @error('date_debut')
+                &lt;p class="text-red-500 text-xs italic mt-2"&gt;{{ $message }}&lt;/p&gt;
+            @enderror
+        &lt;/div&gt;
+
+        &lt;div class="mb-4"&gt;
+            &lt;label for="date_fin" class="block text-gray-700 text-sm font-bold mb-2"&gt;Date Fin:&lt;/label&gt;
+            &lt;input type="datetime-local" name="date_fin" id="date_fin" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('date_fin') border-red-500 @enderror" value="{{ old('date_fin') }}" required&gt;
+            @error('date_fin')
+                &lt;p class="text-red-500 text-xs italic mt-2"&gt;{{ $message }}&lt;/p&gt;
+            @enderror
+        &lt;/div&gt;
+
+        &lt;div class="mb-6"&gt;
+            &lt;label for="image" class="block text-gray-700 text-sm font-bold mb-2"&gt;Image (JPG/PNG, max 2 Mo):&lt;/label&gt;
+            &lt;input type="file" name="image" id="image" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('image') border-red-500 @enderror"&gt;
+            @error('image')
+                &lt;p class="text-red-500 text-xs italic mt-2"&gt;{{ $message }}&lt;/p&gt;
+            @enderror
+        &lt;/div&gt;
+
+        &lt;div class="flex items-center justify-between"&gt;
+            &lt;button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline transition-colors duration-200"&gt;
+                Créer Événement
+            &lt;/button&gt;
+            &lt;a href="{{ route('evenement.index') }}" class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"&gt;
+                Annuler
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+@endsection
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2025 EFM Laravel Casablanca. Tous droits réservés.</p>
+        </footer>
     </div>
 </body>
-</html> 
+</html>
