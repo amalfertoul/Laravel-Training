@@ -1,20 +1,629 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laravel V1</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Examen EFM Laravel V1 2022-2023 - Questions et Réponses</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray */
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 960px;
+            margin: 2.5rem auto;
+            padding: 2.5rem;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        .header-section {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            border-bottom: 3px solid #60a5fa; /* Blue-400 */
+            padding-bottom: 1.5rem;
+        }
+        .header-section h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2563eb; /* Blue-600 */
+            margin-bottom: 0.5rem;
+        }
+        .header-section p {
+            font-size: 1.1rem;
+            color: #4b5563; /* Gray-700 */
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1f2937; /* Gray-900 */
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e5e7eb; /* Gray-200 */
+            padding-bottom: 0.75rem;
+        }
+        .question-block {
+            background-color: #e0f2fe; /* Light blue-100 */
+            border-left: 5px solid #38bdf8; /* Sky-400 */
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        .question-text {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: #1f2937;
+            margin-bottom: 0.8rem;
+        }
+        .answer-text {
+            font-size: 1rem;
+            color: #4b5563;
+            margin-top: 1rem;
+            background-color: #bfdbfe; /* Blue-200 */
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #93c5fd; /* Blue-300 */
+        }
+        .code-snippet {
+            background-color: #1f2937; /* Dark gray for code */
+            color: #f9fafb; /* Light text */
+            padding: 1.2rem;
+            border-radius: 8px;
+            font-family: 'Fira Code', monospace;
+            overflow-x: auto;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #d1d5db; /* Gray-300 */
+            color: #6b7280; /* Gray-500 */
+            font-size: 0.9rem;
+        }
+        .list-style-none {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .correct-choice {
+            background-color: #d1fae5; /* Green-100 */
+            border: 1px solid #a7f3d0; /* Green-200 */
+            font-weight: bold;
+            color: #047857; /* Green-700 */
+            padding: 0.5rem;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+        }
+    </style>
 </head>
-<body>
-    <div class="container mt-4">
-        <h2>Laravel V1 Exam</h2>
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Laravel Development Exam</h5>
-                <p class="card-text">This section contains the Laravel V1 development exam.</p>
+<body class="p-6">
+    <div class="container">
+        <header class="header-section">
+            <h1>EVALUATION DE FIN DE MODULE</h1>
+            <p>Direction Régionale du Marrakech - Safi</p>
+            <p>Filière: Développement Digital Option Web Full Stack</p>
+            <p>Année: 2022/2023 | Durée: 02H30 | Epreuve/Barème: 40/40 | VARIANTE: V1</p>
+        </header>
+
+        <section>
+            <h2 class="section-title">Partie théorique: 10 points</h2>
+
+            <p class="mb-4 text-gray-700 italic">N.B: Une question peut avoir plusieurs réponses justes.</p>
+
+            <!-- Question 1 -->
+            <div class="question-block">
+                <p class="question-text">Question 1: Quel est l'objectif principal de la migration sous Laravel</p>
+                <ul class="list-none space-y-2">
+                    <li>A. Importer des données dans une base de données.</li>
+                    <li>B. Exporter des données dans une base de données.</li>
+                    <li class="correct-choice">C. Créer et modifier des tables dans la base de données.</li>
+                    <li>D. Effectuer des requêtes SQL complexes sur une base de données.</li>
+                </ul>
             </div>
-        </div>
+
+            <!-- Question 2 -->
+            <div class="question-block">
+                <p class="question-text">Question 2: Où est ce qu'on ajoute un middleware global pour informer une application Laravel de son existence:</p>
+                <ul class="list-none space-y-2">
+                    <li>A. Dans l'objet <code>$routeMiddleware</code> du fichier App/HTTP/kernel.php</li>
+                    <li>B. Dans l'objet <code>$middleware</code> du fichier App/.env</li>
+                    <li class="correct-choice">C. Dans l'objet <code>$middleware</code> du fichier App/HTTP/kernel.php</li>
+                    <li>D. Dans l'objet <code>$routeMiddleware</code> du fichier App/.env</li>
+                </ul>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-block">
+                <p class="question-text">Question 3: Quelle est la commande permettant de migrer les derniers fichiers créés pour créer ou modifier des tables de bases de données sous Laravel:</p>
+                <ul class="list-none space-y-2">
+                    <li>A. php artisan make :migration</li>
+                    <li class="correct-choice">B. php artisan migrate</li>
+                    <li>C. php artisan migrate refresh</li>
+                    <li>D. php artisan migrate :rollback</li>
+                </ul>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-block">
+                <p class="question-text">Question 4: Quelle est la définition de route à utiliser avec un contrôleur à action unique</p>
+                <ul class="list-none space-y-2">
+                    <li>A. Route::resource('/chemin', NomControleur ::class);</li>
+                    <li class="correct-choice">B. Route::get('/chemin', NomControleur::class);</li>
+                    <li>C. Route::invoke('/chemin', NomControleur ::class);</li>
+                    <li>D. Route::middleware('/chemin', NomControleur::class);</li>
+                </ul>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-block">
+                <p class="question-text">Question 5: Dans une relation de type un à plusieurs (One to Many), quelle est la méthode employée pour récupérer les enregistrements du model enfant :</p>
+                <ul class="list-none space-y-2">
+                    <li class="correct-choice">A. hasMany()</li>
+                    <li>B. hasOne()</li>
+                    <li>C. belongsTo()</li>
+                    <li>D. hasOneThrough()</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Partie pratique: 30 points</h2>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mb-6 rounded-md">
+                <p class="font-bold">L'école AL-ANOUAR désire informatiser ses clubs d'activités parascolaires, elle vous a chargé de développer une application Web en utilisant le framework php Laravel et le système de gestion de base de données MySQL. Le diagramme de classe sur lequel vous vous êtes basé est le suivant :</p>
+                <img src="https://placehold.co/600x300/E0F2FE/2563EB?text=Diagramme+de+Classe" alt="Diagramme de Classe" class="my-4 rounded-md shadow-md">
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mb-6 rounded-md">
+                <p class="font-bold">Le tableau suivant illustre les URLs de l'application ainsi que les routes associées :</p>
+                <div class="overflow-x-auto my-4">
+                    <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <thead>
+                            <tr class="bg-gray-100 border-b">
+                                <th class="py-2 px-4 text-left text-sm font-semibold text-gray-700">Méthode HTTP</th>
+                                <th class="py-2 px-4 text-left text-sm font-semibold text-gray-700">URL</th>
+                                <th class="py-2 px-4 text-left text-sm font-semibold text-gray-700">Action</th>
+                                <th class="py-2 px-4 text-left text-sm font-semibold text-gray-700">Nom de la route</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">GET</td><td class="py-2 px-4 text-sm text-gray-700">/eleves</td><td class="py-2 px-4 text-sm text-gray-700">index</td><td class="py-2 px-4 text-sm text-gray-700">eleves.index</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">GET</td><td class="py-2 px-4 text-sm text-gray-700">/eleves/{id}</td><td class="py-2 px-4 text-sm text-gray-700">show</td><td class="py-2 px-4 text-sm text-gray-700">eleves.show</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">GET</td><td class="py-2 px-4 text-sm text-gray-700">/eleves/create</td><td class="py-2 px-4 text-sm text-gray-700">create</td><td class="py-2 px-4 text-sm text-gray-700">eleves.create</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">POST</td><td class="py-2 px-4 text-sm text-gray-700">/eleves/store</td><td class="py-2 px-4 text-sm text-gray-700">store</td><td class="py-2 px-4 text-sm text-gray-700">eleves.store</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">GET</td><td class="py-2 px-4 text-sm text-gray-700">/eleves/{id}/edit</td><td class="py-2 px-4 text-sm text-gray-700">edit</td><td class="py-2 px-4 text-sm text-gray-700">eleves.edit</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">PUT/PATCH</td><td class="py-2 px-4 text-sm text-gray-700">/eleves/{id}</td><td class="py-2 px-4 text-sm text-gray-700">update</td><td class="py-2 px-4 text-sm text-gray-700">eleves.update</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">DELETE</td><td class="py-2 px-4 text-sm text-gray-700">/eleves/{id}</td><td class="py-2 px-4 text-sm text-gray-700">destroy</td><td class="py-2 px-4 text-sm text-gray-700">eleves.destroy</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">GET</td><td class="py-2 px-4 text-sm text-gray-700">/clubs</td><td class="py-2 px-4 text-sm text-gray-700">index</td><td class="py-2 px-4 text-sm text-gray-700">clubs.index</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">GET</td><td class="py-2 px-4 text-sm text-gray-700">/clubs/{id}</td><td class="py-2 px-4 text-sm text-gray-700">show</td><td class="py-2 px-4 text-sm text-gray-700">clubs.show</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">GET</td><td class="py-2 px-4 text-sm text-gray-700">/clubs/create</td><td class="py-2 px-4 text-sm text-gray-700">create</td><td class="py-2 px-4 text-sm text-gray-700">clubs.create</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">POST</td><td class="py-2 px-4 text-sm text-gray-700">/clubs/store</td><td class="py-2 px-4 text-sm text-gray-700">store</td><td class="py-2 px-4 text-sm text-gray-700">clubs.store</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">GET</td><td class="py-2 px-4 text-sm text-gray-700">/clubs/{id}/edit</td><td class="py-2 px-4 text-sm text-gray-700">edit</td><td class="py-2 px-4 text-sm text-gray-700">clubs.edit</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">PUT/PATCH</td><td class="py-2 px-4 text-sm text-gray-700">/clubs/{id}</td><td class="py-2 px-4 text-sm text-gray-700">update</td><td class="py-2 px-4 text-sm text-gray-700">clubs.update</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">DELETE</td><td class="py-2 px-4 text-sm text-gray-700">/clubs/{id}</td><td class="py-2 px-4 text-sm text-gray-700">destroy</td><td class="py-2 px-4 text-sm text-gray-700">clubs.destroy</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">GET</td><td class="py-2 px-4 text-sm text-gray-700">/activités</td><td class="py-2 px-4 text-sm text-gray-700">index</td><td class="py-2 px-4 text-sm text-gray-700">activités.index</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">GET</td><td class="py-2 px-4 text-sm text-gray-700">/activités/{id}</td><td class="py-2 px-4 text-sm text-gray-700">show</td><td class="py-2 px-4 text-sm text-gray-700">activités.show</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">GET</td><td class="py-2 px-4 text-sm text-gray-700">/activités/create</td><td class="py-2 px-4 text-sm text-gray-700">create</td><td class="py-2 px-4 text-sm text-gray-700">activités.create</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">POST</td><td class="py-2 px-4 text-sm text-gray-700">/activités/store</td><td class="py-2 px-4 text-sm text-gray-700">store</td><td class="py-2 px-4 text-sm text-gray-700">activités.store</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">GET</td><td class="py-2 px-4 text-sm text-gray-700">/activités/{id}/edit</td><td class="py-2 px-4 text-sm text-gray-700">edit</td><td class="py-2 px-4 text-sm text-gray-700">activités.edit</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">PUT/PATCH</td><td class="py-2 px-4 text-sm text-gray-700">/activités/{id}</td><td class="py-2 px-4 text-sm text-gray-700">update</td><td class="py-2 px-4 text-sm text-gray-700">activités.update</td></tr>
+                            <tr><td class="py-2 px-4 text-sm text-gray-700">DELETE</td><td class="py-2 px-4 text-sm text-gray-700">/activités/{id}</td><td class="py-2 px-4 text-sm text-gray-700">destroy</td><td class="py-2 px-4 text-sm text-gray-700">activités.destroy</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 text-blue-800 p-4 mb-6 rounded-md">
+                <p class="font-bold">On dispose des vues suivantes :</p>
+                <p>La vue <code>eleves.index</code>:</p>
+                <img src="https://placehold.co/600x200/E0F2FE/2563EB?text=Liste+des+élèves" alt="Liste des élèves" class="my-4 rounded-md shadow-md">
+            </div>
+
+            <!-- Travail demandé -->
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Travail demandé :</h3>
+
+            <!-- Question 1 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">1) Donner les commandes permettant de créer les modèles Eleve, Club et Activité et de générer les migrations pour créer les tables eleves, clubs et activités. (1.5 pts)</p>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+php artisan make:model Eleve -m
+php artisan make:model Club -m
+php artisan make:model Activite -m
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Question 2 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">2) Editer les fonctions <code>up()</code> de chaque fichier de migration sachant que la table eleves doit contenir une clé étrangère qui fait référence à la table clubs. (3 pts)</p>
+                <div class="answer-text">
+                    <p>Pour <code>create_eleves_table.php</code> :</p>
+                    <pre class="code-snippet">
+public function up(){
+    Schema::create('eleves', function(Blueprint $table){
+        $table->id();
+        $table->string('nom');
+        $table->string('prenom');
+        $table->foreignId('club_id')->constrained('clubs')->onDelete('cascade');
+        $table->timestamps();
+    });
+}
+                    </pre>
+                    <p>Pour <code>create_clubs_table.php</code> :</p>
+                    <pre class="code-snippet">
+public function up(){
+    Schema::create('clubs', function (Blueprint $table){
+        $table->id();
+        $table->string('nom');
+        $table->timestamps();
+    });
+}
+                    </pre>
+                    <p>Pour <code>create_activites_table.php</code> :</p>
+                    <pre class="code-snippet">
+public function up(){
+    Schema::create('activites', function (Blueprint $table){
+        $table->id();
+        $table->string('description');
+        $table->date('dateDebut');
+        $table->integer('nombreJours');
+        $table->timestamps();
+    });
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Question 3 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">3) Editer les modèles Eleve, Club et Activité en ajoutant les caractéristiques suivantes :</p>
+                <ul class="list-none ml-4 space-y-4">
+                    <li>a. L'accès à la liste des élèves d'un club dans le modèle Club. (1.5 pts)
+                        <pre class="code-snippet">
+// Dans app/Models/Club.php
+public function eleves(): HasMany
+{
+    return $this->hasMany(Eleve::class);
+}
+                        </pre>
+                    </li>
+                    <li>b. L'accès au club de l'élève dans le modèle Elève (1.5 pts)
+                        <pre class="code-snippet">
+// Dans app/Models/Eleve.php
+public function club(): BelongsTo
+{
+    return $this->belongsTo(Club::class);
+}
+                        </pre>
+                    </li>
+                    <li>c. Matérialiser la relation plusieurs à plusieurs entre les modèles Elève et Activité en ajoutant et éditant les migrations nécessaires de ou des tables pivots. (3 pts)
+                        <p>Commande pour la migration de la table pivot : <code>php artisan make:migration create_eleve_activite_table</code></p>
+                        <pre class="code-snippet">
+// Dans database/migrations/..._create_eleve_activite_table.php
+public function up(){
+    Schema::create('eleve_activite', function(Blueprint $table) {
+        $table->id();
+        $table->foreignId('eleve_id')->constrained()->onDelete('cascade');
+        $table->foreignId('activite_id')->constrained()->onDelete('cascade');
+        $table->timestamps();
+    });
+}
+                        </pre>
+                        <p>Dans <code>app/Models/Eleve.php</code> :</p>
+                        <pre class="code-snippet">
+public function activites(): BelongsToMany
+{
+    return $this->belongsToMany(Activite::class);
+}
+                        </pre>
+                        <p>Dans <code>app/Models/Activite.php</code> :</p>
+                        <pre class="code-snippet">
+public function eleves(): BelongsToMany
+{
+    return $this->belongsToMany(Eleve::class);
+}
+                        </pre>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Question 4 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">4) Donner les commandes permettant de créer puis éditer des seeders pour peupler les tables de la base de données. (1.5 pts)</p>
+                <div class="answer-text">
+                    <p>Commandes :</p>
+                    <pre class="code-snippet">
+php artisan make:seeder ElevesTableSeeder
+php artisan make:seeder ClubsTableSeeder
+php artisan make:seeder ActivitesTableSeeder
+                    </pre>
+                    <p>Exemple de `run()` pour `ElevesTableSeeder.php` :</p>
+                    <pre class="code-snippet">
+// Dans database/seeders/ElevesTableSeeder.php
+use App\Models\Eleve;
+use App\Models\Club;
+use Illuminate\Database\Seeder;
+
+class ElevesTableSeeder extends Seeder
+{
+    public function run()
+    {
+        // Assurez-vous d'avoir au moins un club créé
+        $club = Club::firstOrCreate(['nom' => 'Club de Sport']);
+
+        Eleve::create([
+            'nom' => 'MAJDI',
+            'prenom' => 'Farid',
+            'club_id' => $club->id
+        ]);
+        // Ajoutez d'autres élèves si nécessaire
+    }
+}
+                    </pre>
+                    <p>Vous feriez de même pour `ClubsTableSeeder` et `ActivitesTableSeeder`.</p>
+                </div>
+            </div>
+
+            <!-- Question 5 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">5) Donner les commandes permettant de lancer les migrations, et d'exécuter les seeders. (1 pt)</p>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+php artisan migrate
+php artisan db:seed
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Question 6 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">6) Donner les commandes nécessaires à la créations des contrôleurs EleveController, ClubController et ActiviteController avec toutes les méthodes mentionnées dans le tableau ci-haut. (1.5 pts)</p>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+php artisan make:controller EleveController --resource
+php artisan make:controller ClubController --resource
+php artisan make:controller ActiviteController --resource
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Question 7 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">7) Donner le code de la méthode <code>index</code> du contrôleur <code>EleveController</code> permettant d'afficher la vue <code>eleves.index</code>. (1.5 pts)</p>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+// Dans app/Http/Controllers/EleveController.php
+use App\Models\Eleve; // N'oubliez pas d'importer le modèle
+
+public function index()
+{
+    $eleves = Eleve::all(); // Ou Eleve::paginate(10); pour la pagination
+    return view('eleves.index', compact('eleves'));
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Question 8 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">8) Donner le code html/blade de la vue <code>eleves.edit</code> (utiliser l'html basique sans styler les éléments): (3 pts)</p>
+                <ul class="list-disc list-inside ml-4 mb-2">
+                    <li>L'entrée 'ID élève' est en lecture seule.</li>
+                    <li>La liste déroulante 'ID club' affiche l'ID concaténé avec le nom du club.</li>
+                    <li>Le bouton « Modifier » valide la modification, le bouton « Annuler » revient vers l'index sans valider la modification.</li>
+                </ul>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+&lt;!-- Dans resources/views/eleves/edit.blade.php --&gt;
+&lt;body&gt;
+    &lt;h1&gt;Modifier un élève&lt;/h1&gt;
+    &lt;form action="{{ route('eleves.update', $eleve->id) }}" method="POST"&gt;
+        @csrf
+        @method('PUT') {{-- Ou PATCH --}}
+
+        &lt;label for="id_eleve"&gt;ID élève :&lt;/label&gt;
+        &lt;input type="text" name="id" id="id_eleve" value="{{ $eleve->id }}" readonly/&gt;&lt;br/&gt;
+
+        &lt;label for="nom"&gt;Nom:&lt;/label&gt;
+        &lt;input type="text" name="nom" id="nom" value="{{ $eleve->nom }}"/&gt;&lt;br/&gt;
+
+        &lt;label for="prenom"&gt;Prénom :&lt;/label&gt;
+        &lt;input type="text" name="prenom" id="prenom" value="{{ $eleve->prenom }}"/&gt;&lt;br/&gt;
+
+        &lt;label for="club_id"&gt;ID Club: &lt;/label&gt;
+        &lt;select name="club_id" id="club_id"&gt;
+            @foreach($clubs as $club)
+                &lt;option value="{{ $club->id }}" {{ $club->id == $eleve->club_id ? 'selected' : '' }}&gt;
+                    {{ $club->id }} {{ $club->nom }}
+                &lt;/option&gt;
+            @endforeach
+        &lt;/select&gt;&lt;br/&gt;
+
+        &lt;input type="submit" value="Modifier"/&gt;
+        &lt;a href="{{ route('eleves.index') }}"&gt;Annuler&lt;/a&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Question 9 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">9) Donner le code des méthodes <code>edit</code> et <code>update</code> du contrôleur <code>EleveController</code> permettant d'afficher la vue <code>eleves.edit</code> et de valider la modification puis revenir à la vue <code>eleves.index</code>. (2 pts)</p>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+// Dans app/Http/Controllers/EleveController.php
+use App\Models\Eleve;
+use App\Models\Club;
+use Illuminate\Http\Request; // N'oubliez pas d'importer Request
+
+public function edit($id)
+{
+    $eleve = Eleve::find($id);
+    $clubs = Club::all(); // Pour la liste déroulante des clubs
+    return view('eleves.edit', [
+        'eleve' => $eleve,
+        'clubs' => $clubs
+    ]);
+}
+
+public function update(Request $request, $id)
+{
+    $request->validate([
+        'nom' => 'required|string|max:255',
+        'prenom' => 'required|string|max:255',
+        'club_id' => 'required|exists:clubs,id',
+    ]);
+
+    $eleve = Eleve::find($id);
+    $eleve->update([
+        'nom' => $request->nom,
+        'prenom' => $request->prenom,
+        'club_id' => $request->club_id
+    ]);
+
+    return redirect()->route('eleves.index')->with('success', 'Élève mis à jour avec succès!');
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Question 10 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">10) Donner le code des méthodes <code>create</code> et <code>store</code> du contrôleur <code>EleveController</code> permettant d'afficher la vue <code>eleves.create</code> et de valider l'insertion puis revenir à la vue <code>eleves.index</code>. (2 pts)</p>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+// Dans app/Http/Controllers/EleveController.php
+use App\Models\Eleve;
+use App\Models\Club;
+use Illuminate\Http\Request;
+
+public function create()
+{
+    $clubs = Club::all(); // Pour la liste déroulante des clubs
+    return view('eleves.create', [
+        'clubs' => $clubs
+    ]);
+}
+
+public function store(Request $request)
+{
+    $request->validate([
+        'nom' => 'required|string|max:255',
+        'prenom' => 'required|string|max:255',
+        'club_id' => 'required|exists:clubs,id',
+    ]);
+
+    Eleve::create([
+        'nom' => $request->nom,
+        'prenom' => $request->prenom,
+        'club_id' => $request->club_id
+    ]);
+
+    return redirect()->route('eleves.index')->with('success', 'Élève ajouté avec succès!');
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Question 11 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">11) Donner le code de la méthode <code>show</code> du contrôleur <code>EleveController</code> permettant d'afficher la vue « <code>eleves.show</code> ». (1.5 pts)</p>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+// Dans app/Http/Controllers/EleveController.php
+use App\Models\Eleve;
+
+public function show($id)
+{
+    $eleve = Eleve::find($id);
+    // Assurez-vous que la relation 'activites' est définie dans le modèle Eleve
+    // public function activites() { return $this->belongsToMany(Activite::class); }
+    $eleve->load('activites'); // Charger les activités liées à l'élève
+
+    return view('eleves.show', compact('eleve'));
+}
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Question 12 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">12) Donner le code html/blade de la vue « <code>eleves.show</code> » (utiliser l'html basique sans styler les éléments). (4 pts)</p>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+&lt;!-- Dans resources/views/eleves/show.blade.php --&gt;
+&lt;body&gt;
+    &lt;h1&gt;Gestion des élèves&lt;/h1&gt;
+
+    &lt;p&gt;ID Elève: {{ $eleve->id }}&lt;/p&gt;
+    &lt;p&gt;Nom: {{ $eleve->nom }}&lt;/p&gt;
+    &lt;p&gt;Prénom: {{ $eleve->prenom }}&lt;/p&gt;
+    &lt;p&gt;ID Club: {{ $eleve->club->id ?? 'N/A' }}&lt;/p&gt; {{-- Ajouté ?? 'N/A' pour éviter erreur si club non trouvé --}}
+
+    &lt;h2&gt;Liste d'activités auxquelles l'élève a participé&lt;/h2&gt;
+    &lt;table border="1"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;ID activité&lt;/th&gt;
+                &lt;th&gt;Description&lt;/th&gt;
+                &lt;th&gt;Date début&lt;/th&gt;
+                &lt;th&gt;Nombre de jours&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            @php($total_jours = 0)
+            @forelse($eleve->activites as $activite)
+                &lt;tr&gt;
+                    &lt;td&gt;{{ $activite->id }}&lt;/td&gt;
+                    &lt;td&gt;{{ $activite->description }}&lt;/td&gt;
+                    &lt;td&gt;{{ $activite->dateDebut }}&lt;/td&gt;
+                    &lt;td&gt;{{ $activite->nombreJours }}&lt;/td&gt;
+                &lt;/tr&gt;
+                @php($total_jours += $activite->nombreJours)
+            @empty
+                &lt;tr&gt;&lt;td colspan="4"&gt;Cet élève n'a participé à aucune activité.&lt;/td&gt;&lt;/tr&gt;
+            @endforelse
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;p&gt;Nombre total des jours : {{ $total_jours }}&lt;/p&gt;
+
+    &lt;a href="{{ route('eleves.index') }}"&gt;Retour à la liste des élèves&lt;/a&gt;
+&lt;/body&gt;
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Question 13 (Pratique) -->
+            <div class="question-block">
+                <p class="question-text">13) En supposant que toutes les méthodes des contrôleurs EleveController, ClubController et ActiviteController ont été définies, donner les routes nécessaires pour accéder aux URLs mentionnés dans le tableau ci-haut. (1.5 pts)</p>
+                <div class="answer-text">
+                    <pre class="code-snippet">
+// Dans routes/web.php
+use App\Http\Controllers\EleveController;
+use App\Http\Controllers\ClubController;
+use App\Http\Controllers\ActiviteController;
+use Illuminate\Support\Facades\Route;
+
+Route::resource('eleves', EleveController::class);
+Route::resource('clubs', ClubController::class);
+Route::resource('activites', ActiviteController::class);
+                    </pre>
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2023 OFPPT. Tous droits réservés.</p>
+        </footer>
     </div>
 </body>
-</html> 
+</html>
