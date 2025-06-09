@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examen de Fin de Module Régional - Questions Pratiques</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f0f4f8;
+            background-color: #f0f4f8; /* Light blue-gray background */
         }
         .container {
             max-width: 900px;
@@ -19,15 +20,15 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
         .question-block {
-            background-color: #e0f2fe;
-            border-left: 5px solid #2196f3;
+            background-color: #e0f2fe; /* Lighter blue for question background */
+            border-left: 5px solid #2196f3; /* Blue left border */
             padding: 1.5rem;
             margin-bottom: 1.5rem;
             border-radius: 8px;
         }
         .section-title {
-            color: #1a202c;
-            border-bottom: 2px solid #edf2f7;
+            color: #1a202c; /* Dark text for titles */
+            border-bottom: 2px solid #edf2f7; /* Light border under titles */
             padding-bottom: 0.75rem;
             margin-bottom: 1.5rem;
         }
@@ -40,42 +41,25 @@
             font-size: 0.9rem;
         }
         .code-snippet {
-            background-color: #2d3748;
-            color: #e2e8f0;
+            background-color: #2d3748; /* Dark background for code */
+            color: #e2e8f0; /* Light text color */
             padding: 1rem;
             border-radius: 6px;
-            font-family: 'Fira Code', monospace;
-            overflow-x: auto;
+            font-family: 'Fira Code', monospace; /* Monospaced font for code */
+            overflow-x: auto; /* Enable horizontal scrolling for long lines */
             margin-top: 1rem;
         }
         .info-box {
-            background-color: #fffbe0;
-            border-left: 5px solid #fbbf24;
+            background-color: #fffbe0; /* Light yellow for info boxes */
+            border-left: 5px solid #fbbf24; /* Orange left border */
             padding: 1rem;
             margin-top: 1rem;
             border-radius: 8px;
-            color: #533800;
-        }
-        .back-button {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            padding: 10px 20px;
-            background-color: #2196f3;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            transition: background-color 0.3s ease;
-        }
-        .back-button:hover {
-            background-color: #1976d2;
+            color: #533800; /* Darker text for info boxes */
         }
     </style>
 </head>
 <body class="p-4">
-    <a href="backend-variante-1.html" class="back-button">← Retour</a>
     <div class="container shadow-lg rounded-xl">
         <header class="text-center mb-8">
             <h1 class="text-4xl font-extrabold text-blue-800 mb-2">Examen de Fin de Module Régional</h1>
@@ -98,6 +82,7 @@
             <div class="question-block">
                 <p class="text-xl font-medium mb-3 text-gray-900">Q1) Ecrire la commande pour créer un projet laravel nommé "gestion_des_employés". (1 pt)</p>
                 <p class="text-gray-600 italic">
+                    <!-- Placeholder for answer -->
                     Réponse: <span class="code-snippet">composer create-project --prefer-dist laravel/laravel gestion_des_employés</span>
                 </p>
             </div>
@@ -110,6 +95,7 @@
             <div class="question-block">
                 <p class="text-xl font-medium mb-3 text-gray-900">Q2) Ecrire la configuration des informations de connexion de base de données (dans le fichier .env) (2 pts)</p>
                 <p class="text-gray-600 italic">
+                    <!-- Placeholder for answer -->
                     Réponse:
                     <pre class="code-snippet">
 DB_CONNECTION=mysql
@@ -131,6 +117,7 @@ DB_PASSWORD=
                     <li>➤ Pour créer une migration pour la table `Employes`</li>
                 </ul>
                 <p class="text-gray-600 italic">
+                    <!-- Placeholder for answer -->
                     Réponse:
                     <pre class="code-snippet">
 php artisan make:model Employe
@@ -140,13 +127,11 @@ php artisan make:migration create_employes_table
                 </p>
             </div>
 
-            <!-- Continue with the rest of the practical questions... -->
-            <!-- Q4-Q16 -->
-            <!-- Note: I'm showing a few questions as example, the full file would contain all questions -->
-
+            <!-- Q4 -->
             <div class="question-block">
                 <p class="text-xl font-medium mb-3 text-gray-900">Q4) Modifiez le fichier de migration pour définir les champs de table `Employes` (2 pts)</p>
                 <p class="text-gray-600 italic">
+                    <!-- Placeholder for answer -->
                     Réponse:
                     <pre class="code-snippet">
 // Dans database/migrations/..._create_employes_table.php
@@ -166,8 +151,262 @@ public function up()
                 </p>
             </div>
 
-            <!-- Add more questions here... -->
+            <!-- Q5 -->
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">Q5) Ecrire la commande pour Exécutez les migrations (1 pt)</p>
+                <p class="text-gray-600 italic">
+                    <!-- Placeholder for answer -->
+                    Réponse: <span class="code-snippet">php artisan migrate</span>
+                </p>
+            </div>
 
+            <!-- Q6 -->
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">Q6) Ajouté une route de ressources pour le contrôleur `EmployeController` avec URL: `Employe` (1 pt)</p>
+                <p class="text-gray-600 italic">
+                    <!-- Placeholder for answer -->
+                    Réponse:
+                    <pre class="code-snippet">
+// Dans routes/web.php
+Route::resource('Employe', EmployeController::class);
+                    </pre>
+                </p>
+            </div>
+
+            <div class="info-box mb-6">
+                <p class="text-lg font-medium">Soit la vue avec le nom `AjouteEmploye.blade.php` dans le dossier `/resources/views/` qui permet d'ajouter un employé à la table `Employés` :</p>
+                <img src="https://placehold.co/400x250/E0F2FE/2196F3?text=Formulaire+Ajouter+Employé" alt="Placeholder for Ajouter un employé form" class="my-4 rounded-md shadow-md">
+            </div>
+
+            <!-- Q7 -->
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">Q7) Modifier la fonction `create()` (dans le fichier EmployeController) pour retourne la vue `AjouteEmploye.blade.php` (1 pt)</p>
+                <p class="text-gray-600 italic">
+                    <!-- Placeholder for answer -->
+                    Réponse:
+                    <pre class="code-snippet">
+// Dans app/Http/Controllers/EmployeController.php
+public function create()
+{
+    return view('AjouteEmploye');
+}
+                    </pre>
+                </p>
+            </div>
+
+            <div class="info-box mb-6">
+                <p class="text-lg font-medium">On Cliquant sur le bouton Valider :</p>
+            </div>
+
+            <!-- Q8 -->
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">Q8) Modifier la fonction `store()` (dans le fichier EmployeController) pour Ajoute les donnée de la formulaire à la table Employes (2 pts)</p>
+                <p class="text-gray-600 italic">
+                    <!-- Placeholder for answer -->
+                    Réponse:
+                    <pre class="code-snippet">
+// Dans app/Http/Controllers/EmployeController.php
+public function store(Request $request)
+{
+    $request->validate([
+        'NomEmploye' => 'required',
+        'PrenomEmploye' => 'required',
+        'Adresse' => 'required',
+        'Telephone' => 'required',
+        'Departement_Id' => 'required|exists:departements,id',
+    ]);
+
+    Employe::create($request->all());
+
+    return redirect()->route('Employe.index')->with('success', 'Employé ajouté avec succès!');
+}
+                    </pre>
+                </p>
+            </div>
+
+            <!-- Q9 -->
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">Q9) Modifier Action="" et Method="" dans le formulaire de la page ci-dessus (Annexe 1) pour router la fonction `store()` (2 pts)</p>
+                <p class="text-gray-600 italic">
+                    <!-- Placeholder for answer -->
+                    Réponse:
+                    <pre class="code-snippet">
+&lt;form action="{{ route('Employe.store') }}" method="POST"&gt;
+    @csrf
+    &lt;!-- Vos champs de formulaire ici --&gt;
+&lt;/form&gt;
+                    </pre>
+                </p>
+            </div>
+
+            <div class="info-box mb-6">
+                <p class="text-lg font-medium">Soit la vue avec le nom `ListEmployes.blade.php` dans le dossier `/resources/views/` qui permet d'afficher la liste des employés:</p>
+                <img src="https://placehold.co/400x250/E0F2FE/2196F3?text=Liste+des+Employés" alt="Placeholder for Liste des employés table" class="my-4 rounded-md shadow-md">
+            </div>
+
+            <!-- Q10 -->
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">Q10) Modifier la fonction `index()` (dans le fichier EmployeController) pour afficher la liste des employés. Utilisez les fonctionnalités de pagination de Laravel pour afficher 10 employés par page (1 pt)</p>
+                <p class="text-gray-600 italic">
+                    <!-- Placeholder for answer -->
+                    Réponse:
+                    <pre class="code-snippet">
+// Dans app/Http/Controllers/EmployeController.php
+public function index()
+{
+    $employes = Employe::paginate(10);
+    return view('ListEmployes', compact('employes'));
+}
+                    </pre>
+                </p>
+            </div>
+
+            <div class="info-box mb-6">
+                <p class="text-lg font-medium">On Cliquant sur le bouton Modifier (annexe 2)</p>
+            </div>
+
+            <!-- Q11 -->
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">Q11) Modifier la fonction `edit()` (dans le fichier EmployeController) pour retourne une vue de modification d'un employé existante avec un formulaire pré-rempli avec les informations de l'employé à modifier. (4 pts)</p>
+                <p class="text-gray-600 italic">
+                    <!-- Placeholder for answer -->
+                    Réponse:
+                    <pre class="code-snippet">
+// Dans app/Http/Controllers/EmployeController.php
+public function edit(Employe $employe)
+{
+    return view('EditEmploye', compact('employe')); // Assuming you have an EditEmploye.blade.php view
+}
+                    </pre>
+                </p>
+            </div>
+
+            <!-- Q12 -->
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">Q12) Modifier la fonction `Update()` (dans le fichier EmployeController) pour modifier les donnée de l'employé à la base de données et retourne la vue `ListEmployes.blade.php` (2 pts)</p>
+                <p class="text-gray-600 italic">
+                    <!-- Placeholder for answer -->
+                    Réponse:
+                    <pre class="code-snippet">
+// Dans app/Http/Controllers/EmployeController.php
+public function update(Request $request, Employe $employe)
+{
+    $request->validate([
+        'NomEmploye' => 'required',
+        'PrenomEmploye' => 'required',
+        'Adresse' => 'required',
+        'Telephone' => 'required',
+        'Departement_Id' => 'required|exists:departements,id',
+    ]);
+
+    $employe->update($request->all());
+
+    return redirect()->route('Employe.index')->with('success', 'Employé mis à jour avec succès!');
+}
+                    </pre>
+                </p>
+            </div>
+
+            <!-- Q13 -->
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">Q13) Modifier la fonction `destroy()` (dans le fichier EmployeController) pour supprimer un employé et retourne la vue `ListEmployes.blade.php` (2 pts)</p>
+                <p class="text-gray-600 italic">
+                    <!-- Placeholder for answer -->
+                    Réponse:
+                    <pre class="code-snippet">
+// Dans app/Http/Controllers/EmployeController.php
+public function destroy(Employe $employe)
+{
+    $employe->delete();
+    return redirect()->route('Employe.index')->with('success', 'Employé supprimé avec succès!');
+}
+                    </pre>
+                </p>
+            </div>
+
+            <!-- Q14 -->
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">Q14) Ajoutez une vue de confirmation pour supprimer un employé (1 pt)</p>
+                <p class="text-gray-600 italic">
+                    <!-- Placeholder for answer -->
+                    Réponse:
+                    <pre class="code-snippet">
+&lt;!-- Dans resources/views/confirm_delete_employe.blade.php --&gt;
+&lt;h1&gt;Confirmer la suppression&lt;/h1&gt;
+&lt;p&gt;Êtes-vous sûr de vouloir supprimer cet employé ?&lt;/p&gt;
+&lt;form action="{{ route('Employe.destroy', $employe->id) }}" method="POST"&gt;
+    @csrf
+    @method('DELETE')
+    &lt;button type="submit"&gt;Supprimer&lt;/button&gt;
+    &lt;a href="{{ route('Employe.index') }}"&gt;Annuler&lt;/a&gt;
+&lt;/form&gt;
+
+// Et la route dans web.php
+Route::get('/Employe/{employe}/confirm-delete', [EmployeController::class, 'confirmDelete'])->name('Employe.confirmDelete');
+
+// Et la méthode confirmDelete dans EmployeController
+public function confirmDelete(Employe $employe)
+{
+    return view('confirm_delete_employe', compact('employe'));
+}
+                    </pre>
+                </p>
+            </div>
+
+            <!-- Q15 -->
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">Q15) Ecrire les commandes artisan correspondant de Créer "seeder" pour insérer des données de test dans la table Employes (1 pt)</p>
+                <p class="text-gray-600 italic">
+                    <!-- Placeholder for answer -->
+                    Réponse:
+                    <pre class="code-snippet">
+php artisan make:seeder EmployeSeeder
+// Dans database/seeders/EmployeSeeder.php
+public function run()
+{
+    Employe::factory()->count(20)->create(); // Using factories for dummy data
+}
+// Puis dans database/seeders/DatabaseSeeder.php
+$this->call(EmployeSeeder::class);
+// Enfin, pour exécuter le seeder:
+php artisan db:seed --class=EmployeSeeder
+                    </pre>
+                </p>
+            </div>
+
+            <!-- Q16 -->
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">Q16) Créez un middleware pour empêcher l'accès aux utilisateurs qui ne sont pas autorisés à modifier les employes. (3 pts)</p>
+                <p class="text-gray-600 italic">
+                    <!-- Placeholder for answer -->
+                    Réponse:
+                    <pre class="code-snippet">
+// Commande pour créer le middleware:
+php artisan make:middleware CheckEmployeePermission
+
+// Dans app/Http/Middleware/CheckEmployeePermission.php
+public function handle(Request $request, Closure $next)
+{
+    // Exemple simple: vérifier si l'utilisateur est un administrateur
+    if (! Auth::user()->isAdmin()) { // Supposons une méthode isAdmin() sur le modèle User
+        return redirect('home')->with('error', 'Accès non autorisé.');
+    }
+    return $next($request);
+}
+
+// Enregistrer le middleware dans app/Http/Kernel.php
+protected $routeMiddleware = [
+    'check.employe.permission' => \App\Http\Middleware\CheckEmployeePermission::class,
+];
+
+// Appliquer le middleware à un groupe de routes ou à des méthodes spécifiques dans EmployeController
+public function __construct()
+{
+    $this->middleware('check.employe.permission')->only(['edit', 'update', 'destroy']);
+}
+                    </pre>
+                </p>
+            </div>
         </section>
 
         <footer class="footer">
@@ -175,4 +414,4 @@ public function up()
         </footer>
     </div>
 </body>
-</html> 
+</html>
