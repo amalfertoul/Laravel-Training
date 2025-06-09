@@ -57,9 +57,29 @@
             border-radius: 8px;
             color: #533800; /* Darker text for info boxes */
         }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #2196f3;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+        .back-button:hover {
+            background-color: #1976d2;
+            color: white;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body class="p-4">
+    <a href="backend-variante-1.html" class="back-button">← Retour</a>
     <div class="container shadow-lg rounded-xl">
         <header class="text-center mb-8">
             <h1 class="text-4xl font-extrabold text-blue-800 mb-2">Examen de Fin de Module Régional</h1>
