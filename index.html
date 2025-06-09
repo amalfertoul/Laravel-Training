@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laravel Training</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .section {
+            display: none;
+            padding: 20px;
+        }
+        .section.active {
+            display: block;
+        }
+        .nav-buttons {
+            margin-bottom: 20px;
+        }
+        .nav-buttons button {
+            margin: 5px;
+            white-space: normal;
+            text-align: left;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Laravel Training</h1>
+        
+        <div class="nav-buttons text-center">
+            <button class="btn btn-primary" onclick="showSection('section1')">Drâa Tafilalet 2023</button>
+            <button class="btn btn-primary" onclick="showSection('section2')">Souss-Massa 2024</button>
+            <button class="btn btn-primary" onclick="showSection('section3')">Laravel V1</button>
+            <button class="btn btn-primary" onclick="showSection('section4')">Backend EFM V1 2022-2023</button>
+            <button class="btn btn-primary" onclick="showSection('section5')">Laravel Casa 2025</button>
+            <button class="btn btn-primary" onclick="showSection('section6')">Back-end Variante 1</button>
+        </div>
+
+        <div id="section1" class="section active">
+            <iframe src="draa-tafilalet-2023.html" width="100%" height="600px" frameborder="0"></iframe>
+        </div>
+        <div id="section2" class="section">
+            <iframe src="souss-massa-2024.html" width="100%" height="600px" frameborder="0"></iframe>
+        </div>
+        <div id="section3" class="section">
+            <iframe src="laravel-v1.html" width="100%" height="600px" frameborder="0"></iframe>
+        </div>
+        <div id="section4" class="section">
+            <iframe src="backend-efm-v1-2023.html" width="100%" height="600px" frameborder="0"></iframe>
+        </div>
+        <div id="section5" class="section">
+            <iframe src="laravel-casa-2025.html" width="100%" height="600px" frameborder="0"></iframe>
+        </div>
+        <div id="section6" class="section">
+            <iframe src="backend-variante-1.html" width="100%" height="600px" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html> 

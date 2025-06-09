@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen de Fin de Module Régional - Questions & Réponses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .question-block {
+            background-color: #e0f2fe;
+            border-left: 5px solid #2196f3;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+        }
+        .answer-option {
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 6px;
+            background-color: #f5f5f5;
+            transition: background-color 0.3s ease;
+        }
+        .correct-answer {
+            background-color: #dcfce7;
+            border: 1px solid #22c55e;
+            font-weight: bold;
+        }
+        .section-title {
+            color: #1a202c;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        .footer {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            color: #718096;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #2196f3;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #1976d2;
+        }
+    </style>
+</head>
+<body class="p-4">
+    <a href="backend-variante-1.html" class="back-button">← Retour</a>
+    <div class="container shadow-lg rounded-xl">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-extrabold text-blue-800 mb-2">Examen de Fin de Module Régional</h1>
+            <p class="text-lg text-gray-600">Module: Développement back-end | Filière: Développement digital | Niveau: TS</p>
+            <p class="text-md text-gray-500 mt-1">Année: 2023/2024 | Durée: 2h30 heures</p>
+        </header>
+
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold section-title">Partie théorique (11 pts)</h2>
+
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800">Exercice 1: (5pts)</h3>
+            <p class="text-lg mb-4 text-gray-700">Trouver la bonne réponse :</p>
+
+            <!-- Question 1 -->
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">1- Quel est le principe fondamental du concept "Migration" dans Laravel ? (1 pt)</p>
+                <div class="space-y-2 text-base">
+                    <div class="answer-option rounded-md">a. Gestion des sessions.</div>
+                    <div class="answer-option correct-answer rounded-md">b. Versionnement de la structure de la base de données.</div>
+                    <div class="answer-option rounded-md">c. Configuration des routes.</div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">2- Quelle est la méthode utilisée pour définir une relation "Many-to-Many" dans Eloquent ? (1 pt)</p>
+                <div class="space-y-2 text-base">
+                    <div class="answer-option rounded-md">a. hasMany()</div>
+                    <div class="answer-option rounded-md">b. belongsTo()</div>
+                    <div class="answer-option correct-answer rounded-md">c. belongsToMany()</div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">3- Quelle est la convention de nommage par défaut pour le contrôleur qui gère les opérations CRUD d'une entité "Departements"? (1pt)</p>
+                <div class="space-y-2 text-base">
+                    <div class="answer-option correct-answer rounded-md">a. DepartementController.</div>
+                    <div class="answer-option rounded-md">b. CRUDController</div>
+                    <div class="answer-option rounded-md">c. DepartementCRUD</div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">4- Dans quel fichier est défini le modèle par défaut pour une table dans Laravel ? (1pts)</p>
+                <div class="space-y-2 text-base">
+                    <div class="answer-option rounded-md">a. database/migrations</div>
+                    <div class="answer-option correct-answer rounded-md">b. app/Models</div>
+                    <div class="answer-option rounded-md">c. config/database.php</div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">5- Quelle est la commande pour créer une nouvelle migration dans Laravel? (1pts)</p>
+                <div class="space-y-2 text-base">
+                    <div class="answer-option correct-answer rounded-md">a. php artisan make:migration</div>
+                    <div class="answer-option rounded-md">b. php artisan migration:make</div>
+                    <div class="answer-option rounded-md">c. php artisan create:migration</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800">Exercice 2: (6 pts)</h3>
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">Q1) Quelle est la différence entre les migrations et les seeders dans Laravel? (2pts)</p>
+                <p class="text-gray-600 italic">
+                    Réponse: Les migrations sont utilisées pour gérer le versionnement de la structure de la base de données (créer, modifier, supprimer des tables et des colonnes). Les seeders sont utilisés pour insérer des données initiales ou de test dans la base de données.
+                </p>
+            </div>
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">Q2) Comment définir une relation "One-to-Many" entre deux modèles dans Laravel? (2pts)</p>
+                <p class="text-gray-600 italic">
+                    Réponse: Dans le modèle parent, utilisez la méthode `hasMany()`. Dans le modèle enfant, utilisez la méthode `belongsTo()`.
+                </p>
+            </div>
+            <div class="question-block">
+                <p class="text-xl font-medium mb-3 text-gray-900">Q3) Qu'est-ce que les middlewares dans Laravel et à quoi servent-ils ? (2pts)</p>
+                <p class="text-gray-600 italic">
+                    Réponse: Les middlewares sont des filtres qui inspectent et/ou filtrent les requêtes HTTP entrant dans votre application. Ils servent à exécuter des tâches avant ou après le traitement d'une requête, comme l'authentification, la journalisation, la gestion des sessions, etc.
+                </p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2024 Examen de Fin de Module Régional. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html> 
