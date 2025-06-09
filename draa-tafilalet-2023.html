@@ -1,20 +1,510 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drâa Tafilalet 2023</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Examen Régional Laravel - Questions & Réponses</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e2e8f0; /* Light gray background */
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 2.5rem;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        .section-header {
+            border-bottom: 3px solid #3b82f6; /* Blue border */
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .section-header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #1e3a8a; /* Dark blue */
+        }
+        .section-header p {
+            font-size: 1.15rem;
+            color: #4b5563;
+        }
+        .question-block {
+            background-color: #f8fafc; /* Very light blue-gray for question blocks */
+            border: 1px solid #d1e1f0; /* Light border */
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        .question-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2d3748; /* Dark text */
+            margin-bottom: 1rem;
+        }
+        .answer-option {
+            background-color: #f0f4f8; /* Lighter background for options */
+            padding: 0.8rem 1.2rem;
+            margin-bottom: 0.6rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #374151;
+            transition: background-color 0.2s ease;
+        }
+        .correct-answer {
+            background-color: #dcfce7; /* Light green for correct answer */
+            border: 1px solid #22c55e; /* Green border */
+            font-weight: bold;
+            color: #166534;
+        }
+        .open-answer {
+            background-color: #e0f2fe; /* Light blue for open answers */
+            border-left: 4px solid #2196f3; /* Blue left border */
+            padding: 1.2rem;
+            margin-top: 1rem;
+            border-radius: 8px;
+            color: #1e40af; /* Darker blue text */
+        }
+        .code-snippet {
+            background-color: #2d3748; /* Dark background for code */
+            color: #e2e8f0; /* Light text color */
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Fira Code', monospace; /* Monospaced font for code */
+            overflow-x: auto; /* Enable horizontal scrolling for long lines */
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+        .footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #cbd5e0;
+            color: #718096;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
-<body>
-    <div class="container mt-4">
-        <h2>Drâa Tafilalet Regional Exam 2023</h2>
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Laravel Development Exam</h5>
-                <p class="card-text">This section contains the Laravel development exam for the Drâa Tafilalet region from 2023.</p>
+<body class="p-6">
+    <div class="container">
+        <a href="index.html" class="inline-block mb-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">← Back to Home</a>
+        <header class="section-header">
+            <h1>Examen de Fin de Module Régional</h1>
+            <p>Développement back-end | Année: 2022/2023</p>
+            <p>Epreuve : Théorique (variante N° 1)</p>
+        </header>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold text-gray-700 mb-6">Questions à choix multiples (QCM)</h2>
+
+            <!-- Question 1 -->
+            <div class="question-block">
+                <p class="question-text">1. Laquelle des commandes suivantes est utilisée pour créer un middleware dans Laravel? (1pt)</p>
+                <div class="space-y-2">
+                    <div class="answer-option correct-answer">A. php artisan make:middleware</div>
+                    <div class="answer-option">B. php ar.isan: middleware</div>
+                    <div class="answer-option">C. php ari make: middleware</div>
+                </div>
             </div>
-        </div>
+
+            <!-- Question 2 -->
+            <div class="question-block">
+                <p class="question-text">2. Quel type de méthode Laravel utilise-t-il pour récupérer les données d'une base de données ? (1pt)</p>
+                <div class="space-y-2">
+                    <div class="answer-option">A. ORM Eloquent</div>
+                    <div class="answer-option">B. Query Builder</div>
+                    <div class="answer-option correct-answer">C. Eloquent ORM et Query Builder</div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-block">
+                <p class="question-text">3. Dans quel repertoire les contrôleurs sont stockés dans Laravel? (1pt)</p>
+                <div class="space-y-2">
+                    <div class="answer-option correct-answer">A. app/http/Controllers</div>
+                    <div class="answer-option">B. app/http/Views</div>
+                    <div class="answer-option">C. app/htto/Model</div>
+                    <div class="answer-option">D. app/http/routes</div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-block">
+                <p class="question-text">4. Où devons-nous définir la connexion à la base de données dans Laravel ? (1pt)</p>
+                <div class="space-y-2">
+                    <div class="answer-option">A. config.php</div>
+                    <div class="answer-option">B. setting php</div>
+                    <div class="answer-option">C. Dans les fichiers d'amorçage</div>
+                    <div class="answer-option correct-answer">D. Fichier .ENV</div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-block">
+                <p class="question-text">5. Quelle commande est de Laravel? (1pt)</p>
+                <div class="space-y-2">
+                    <div class="answer-option">A. git</div>
+                    <div class="answer-option correct-answer">B. composer</div>
+                    <div class="answer-option">C. php artisan</div>
+                    <div class="answer-option">D. php -v</div>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question-block">
+                <p class="question-text">6. Les fichiers Vues (view) dans Laravel se termine par (1pt)</p>
+                <div class="space-y-2">
+                    <div class="answer-option">A. php</div>
+                    <div class="answer-option correct-answer">B. blade</div>
+                    <div class="answer-option">C. view</div>
+                    <div class="answer-option">D. blade.php</div>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question-block">
+                <p class="question-text">7. Pourquoi Laravel utilise-t-il le moteur de template Blade? (1pt)</p>
+                <div class="space-y-2">
+                    <div class="answer-option correct-answer">A. Pour simplifier la programmation</div>
+                    <div class="answer-option">B. Comme modèle</div>
+                    <div class="answer-option">C. Pour faciliter la création des contrôleurs</div>
+                    <div class="answer-option">D. Pour la vue dans MVC</div>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question-block">
+                <p class="question-text">8. Composer est un outil pour la ______ en PHP. (1pt)</p>
+                <div class="space-y-2">
+                    <div class="answer-option">A. Interpolation</div>
+                    <div class="answer-option">B. Configuration</div>
+                    <div class="answer-option correct-answer">C. Gestion des dépendances</div>
+                    <div class="answer-option">D. Aucune de ces réponses</div>
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question-block">
+                <p class="question-text">9. Comment définir des données de session dans Laravel ? (1pt)</p>
+                <div class="space-y-2">
+                    <div class="answer-option">A. $request->db->session('key', 'value');</div>
+                    <div class="answer-option">B. $request->session()->set('key', 'value');</div>
+                    <div class="answer-option correct-answer">C. $request->session()->put('key', 'value');</div>
+                    <div class="answer-option">D. Aucune de ces réponses</div>
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question-block">
+                <p class="question-text">10. Lesquelles des méthodes suivantes sont utilisées dans les classes de migration de bases de données? (1pt)</p>
+                <div class="space-y-2">
+                    <div class="answer-option">A. execute() et rollback()</div>
+                    <div class="answer-option correct-answer">B. up() et down()</div>
+                    <div class="answer-option">C. run() et delete()</div>
+                    <div class="answer-option">D. save() et update()</div>
+                </div>
+            </div>
+
+            <!-- Question 11 -->
+            <div class="question-block">
+                <p class="question-text">11. Comment récupérer le nom de l'action en cours dans Laravel? (1pt)</p>
+                <div class="space-y-2">
+                    <div class="answer-option">A. request()->getAction Method()</div>
+                    <div class="answer-option correct-answer">B. request()->route()->getActionMethod()</div>
+                    <div class="answer-option">C. request()->DB->getActionMethod()</div>
+                </div>
+            </div>
+
+            <!-- Question 12 -->
+            <div class="question-block">
+                <p class="question-text">12. Quelle commande est utilisée pour créer des migrations dans Laravel ? (1pt)</p>
+                <div class="space-y-2">
+                    <div class="answer-option correct-answer">A. php artisan make:migration create_my_table</div>
+                    <div class="answer-option">B. php artisan make:migrate create_my_table</div>
+                    <div class="answer-option">C. php artisan migration create_my_table</div>
+                </div>
+            </div>
+
+            <!-- Question 13 -->
+            <div class="question-block">
+                <p class="question-text">13. Laquelle des méthodes de Collection suivantes renvoient tous les enregistrements d'une collection? (1pt)</p>
+                <div class="space-y-2">
+                    <div class="answer-option">A. ->get()</div>
+                    <div class="answer-option">B. ->whereAll()</div>
+                    <div class="answer-option">C. ->where()</div>
+                    <div class="answer-option correct-answer">D. ->all()</div>
+                </div>
+            </div>
+
+            <!-- Question 17 -->
+            <div class="question-block">
+                <p class="question-text">17. Dans Laravel, une vue peut être appelée à partir de (1pt)</p>
+                <div class="space-y-2">
+                    <div class="answer-option">A. un fichier de migration</div>
+                    <div class="answer-option correct-answer">B. une route</div>
+                    <div class="answer-option">C. Une commande de migration</div>
+                    <div class="answer-option">D. Un contrôleur</div>
+                </div>
+            </div>
+
+            <!-- Question 18 -->
+            <div class="question-block">
+                <p class="question-text">18. Dans Laravel, une "Route" (1pt)</p>
+                <div class="space-y-2">
+                    <div class="answer-option correct-answer">A. Peut pointer vers une action d'un contrôleur</div>
+                    <div class="answer-option">B. Peut pointer vers une vue</div>
+                    <div class="answer-option">C. Peut pointer vers un fichier de migration</div>
+                    <div class="answer-option">D. Peut pointer vers un modèle</div>
+                </div>
+            </div>
+
+            <!-- Question 19 -->
+            <div class="question-block">
+                <p class="question-text">19. Comment est appelée l'interface de ligne de commande fournie par Laravel qui donne un certain nombre de commandes utiles ? (1pt)</p>
+                <div class="space-y-2">
+                    <div class="answer-option">A. Kernel</div>
+                    <div class="answer-option correct-answer">B. Artisan</div>
+                    <div class="answer-option">C. Horizon</div>
+                    <div class="answer-option">D. Dusk</div>
+                </div>
+            </div>
+
+            <!-- Question 24 -->
+            <div class="question-block">
+                <p class="question-text">24. Quelle(s) assertion(s) sur Laravel est/sont juste(s) ? (2 pts)</p>
+                <div class="space-y-2">
+                    <div class="answer-option">A. Laravel est un CMS écrit en PHP</div>
+                    <div class="answer-option correct-answer">B. Laravel intègre le gestionnaire de dépendance Composer</div>
+                    <div class="answer-option correct-answer">C. Laravel est un framework MVC.</div>
+                    <div class="answer-option">D. Laravel repose sur le principe modèle-valeur-contrôleur</div>
+                </div>
+            </div>
+
+            <!-- Question 26 -->
+            <div class="question-block">
+                <p class="question-text">26. Si vous devez ajouter des routes supplémentaires à un contrôleur de ressources au-delà de l'ensemble par défaut de routes de ressources, vous devez définir ces routes _______ votre appel à la méthode Route::resource. (1 pt)</p>
+                <div class="space-y-2">
+                    <div class="answer-option correct-answer">A. Avant</div>
+                    <div class="answer-option">B. Après.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold text-gray-700 mb-6">Questions ouvertes et code</h2>
+
+            <!-- Question 14 -->
+            <div class="question-block">
+                <p class="question-text">14. Peut-on utiliser Laravel pour un développement complet (Frontend+Backend)? (1pt)</p>
+                <div class="open-answer">
+                    <p>Oui. Laravel est un framework complet qui peut être utilisé pour le développement backend et peut être intégré avec des frameworks frontend (comme Vue.js, React, ou avec Blade) pour le frontend.</p>
+                </div>
+            </div>
+
+            <!-- Question 15 -->
+            <div class="question-block">
+                <p class="question-text">15. Créer la liste des routes de type GET pour répondre aux URL suivants: 2.5 pts</p>
+                <ul class="list-disc list-inside ml-6 text-gray-700">
+                    <li>a. `http://localhost/`</li>
+                    <li>b. `http://localhost/login`</li>
+                    <li>c. `http://localhost/page/1`</li>
+                </ul>
+                <div class="open-answer">
+                    <pre class="code-snippet">
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/login', function () {
+    return view('auth.login');
+});
+
+Route::get('/page/{id}', function ($id) {
+    return view('page', ['id' => $id]);
+});
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Question 16 -->
+            <div class="question-block">
+                <p class="question-text">16. Donner un URL intercepté par cette route suivante ? 1.5 pts</p>
+                <pre class="code-snippet">
+Route::get('article/{n}', function ($n) {
+    return 'Je suis l\'article numéro ' . $n . '!';
+})->where('n', '[0-9]+');
+                </pre>
+                <div class="open-answer">
+                    <p>Exemple d'URL intercepté : <code>/article/123</code> (où 123 peut être n'importe quel nombre)</p>
+                </div>
+            </div>
+
+            <!-- Question 20 -->
+            <div class="question-block">
+                <p class="question-text">20. Un département RH utilise les ressources Laravel suivantes pour obtenir des données sur les employés: 2.5 pts</p>
+                <pre class="code-snippet">
+Route::get('/employee/{id?}', function ($id = 0) {
+    return view('employee');
+});
+
+Route::get('/employee/{id}/subordinates/', function ($id) {
+    return view('subordinates');
+});
+
+Route::get('/employee/{id}/subordinates/{subordinateId}', function ($id, $subordinateId) {
+    return view('subordinateDetails');
+});
+                </pre>
+                <p class="mt-4 text-gray-700 font-semibold">Indiquez quelles requêtes sont mappées à quelle vue:</p>
+                <ul class="list-disc list-inside ml-6 open-answer">
+                    <li>Une requête vers "/employee/" sera mappée vers la vue <code>employee</code>.</li>
+                    <li>Une requête vers "/employee/12" sera mappée vers la vue <code>employee</code>.</li>
+                    <li>Une requête vers "/employee/10/subordinates/1" sera mappée vers la vue <code>subordinateDetails</code>.</li>
+                    <li>Une requête vers "/employee/10/subordinates/" sera mappée vers la vue <code>subordinates</code>.</li>
+                    <li>Une requête vers "/employee/10/subordinates/1/10" sera mappée vers la vue <code>subordinateDetails</code>.</li>
+                </ul>
+            </div>
+
+            <!-- Question 21 -->
+            <div class="question-block">
+                <p class="question-text">21. Un zoo utilise le contrôleur Laravel suivant: ... Que peut-on conclure sur le contrôleur et la vue qu'il renvoie ? (Sélectionnez toutes les réponses acceptables). (2.5 pts)</p>
+                <pre class="code-snippet">
+class AnimalController extends Controller
+{
+    public function animalDetailsByName (Request $request, $animalName)
+    {
+        return View::make('welcome', ['fullAnimalName' => $animalName]);
+    }
+}
+                </pre>
+                <p class="mt-4 text-gray-700 font-semibold">Conclusions:</p>
+                <ul class="list-disc list-inside ml-6 open-answer">
+                    <li>La variable `$request` sera définie par injection de dépendances.</li>
+                    <li>La variable `SanimalName` est un paramètre de chemin.</li>
+                    <li>Dans la vue de 'welcome' la valeur de la variable `SanimalName` sera `'fullAnimalName'`.</li>
+                </ul>
+            </div>
+
+            <!-- Question 22 -->
+            <div class="question-block">
+                <p class="question-text">22. Un cinéma utilise Laravel et les modèles Blade pour son site web. La page /movies doit répertorier tous les films et leurs réalisateurs. Le code Laravel correspondant est présenté ici: ... Ecrire le code de welcome.blade.php en utilisant la template Blade afin qu'il imprime les données correctement. (2.5 pts)</p>
+                <pre class="code-snippet">
+// Code Laravel fourni (dans routes/web.php par exemple)
+Route::get('/movies', function () {
+    class Movie {
+        public string $title;
+        public string $director;
+        function __construct(string $title, string $director) {
+            $this->title = $title;
+            $this->director = $director;
+        }
+    }
+    $movies = [
+        new Movie("Casablanca", "Michael Curtiz"),
+        new Movie("Psycho", "Alfred Hitchcock")
+    ];
+    return View::make('welcome', ['movies' => $movies]);
+});
+                </pre>
+                <p class="mt-4 text-gray-700 font-semibold">Code de <code>welcome.blade.php</code>:</p>
+                <div class="open-answer">
+                    <pre class="code-snippet">
+&lt;h1 class="text-3xl font-bold mb-4"&gt;Liste des Films&lt;/h1&gt;
+&lt;ul class="list-disc list-inside ml-4"&gt;
+    @foreach($movies as $movie)
+        &lt;li class="text-lg mb-1"&gt;{{ $movie->title }} ({{ $movie->director }})&lt;/li&gt;
+    @endforeach
+&lt;/ul&gt;
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Question 23 -->
+            <div class="question-block">
+                <p class="question-text">23. Samir a écrit les règles de validation suivantes pour un champ de téléchargement de fichier. `$request->validate(['file' => 'required | mimes: doc, pdf | max: 2048']);` Expliquez brièvement les règles de validation ci-dessus. (2 pts)</p>
+                <div class="open-answer">
+                    <p>Ces règles de validation signifient :</p>
+                    <ul class="list-disc list-inside ml-6">
+                        <li><code>required</code> : Le champ 'file' est obligatoire, il ne peut pas être vide.</li>
+                        <li><code>mimes: doc, pdf</code> : Le fichier téléchargé doit avoir l'extension '.doc' (Microsoft Word) ou '.pdf'.</li>
+                        <li><code>max: 2048</code> : La taille maximale du fichier autorisé est de 2048 kilo-octets (soit 2 méga-octets).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question 25 -->
+            <div class="question-block">
+                <p class="question-text">25. Que signifie CSRF? (1.5pts)</p>
+                <div class="open-answer">
+                    <p><code>CSRF</code> signifie "Cross-Site Request Forgery". C'est un type d'attaque malveillante où des commandes non autorisées sont transmises à partir d'un utilisateur de confiance à un site web. Laravel inclut une protection CSRF par défaut pour prévenir ce type d'attaques.</p>
+                </div>
+            </div>
+
+            <!-- Question 27 -->
+            <div class="question-block">
+                <p class="question-text">27. Que fait la fermeture de la route suivante? `Route::fallback(function () { // });` (1pt)</p>
+                <div class="open-answer">
+                    <p>Cette route est exécutée si aucune autre route définie dans l'application ne correspond à la requête HTTP entrante. Elle sert de "route de secours" pour gérer les erreurs 404 (Page non trouvée), permettant d'afficher une vue personnalisée ou de rediriger l'utilisateur.</p>
+                </div>
+            </div>
+
+            <!-- Question 28 -->
+            <div class="question-block">
+                <p class="question-text">28. Comment traduire les verbes http dans laravel? (1pt)</p>
+                <div class="open-answer">
+                    <p>Dans Laravel, les verbes HTTP sont traduits en méthodes statiques sur la façade <code>Route</code> pour définir les routes :</p>
+                    <ul class="list-disc list-inside ml-6">
+                        <li><code>Route::get('/uri', ...)</code> pour les requêtes GET.</li>
+                        <li><code>Route::post('/uri', ...)</code> pour les requêtes POST.</li>
+                        <li><code>Route::put('/uri', ...)</code> pour les requêtes PUT.</li>
+                        <li><code>Route::patch('/uri', ...)</code> pour les requêtes PATCH.</li>
+                        <li><code>Route::delete('/uri', ...)</code> pour les requêtes DELETE.</li>
+                        <li><code>Route::options('/uri', ...)</code> pour les requêtes OPTIONS.</li>
+                    </ul>
+                    <p>Il existe aussi <code>Route::any()</code> pour tous les verbes, et <code>Route::match(['get', 'post'], '/uri', ...)</code> pour des verbes spécifiques.</p>
+                </div>
+            </div>
+
+            <!-- Question 29 -->
+            <div class="question-block">
+                <p class="question-text">29. Quel serait le chemin vers la vue suivante? `return view('admin.profile', $data);` (1 pt)</p>
+                <div class="open-answer">
+                    <p>Le chemin complet vers le fichier de la vue serait : <code>resources/views/admin/profile.blade.php</code></p>
+                </div>
+            </div>
+
+            <!-- Question 30 -->
+            <div class="question-block">
+                <p class="question-text">30. Que feraient les middlewares suivants dans le constructeur de ce contrôleur ? (2 pts)</p>
+                <pre class="code-snippet">
+public function __construct()
+{
+    $this->middleware('auth');
+    $this->middleware('log')->only('index');
+    $this->middleware('subscribed')->except('store');
+}
+                </pre>
+                <div class="open-answer">
+                    <ul class="list-disc list-inside ml-6">
+                        <li><code>$this->middleware('auth');</code> : Applique le middleware <code>auth</code> (qui gère l'authentification de l'utilisateur) à <strong>toutes les méthodes</strong> de ce contrôleur. Cela signifie que toutes les actions du contrôleur nécessiteront que l'utilisateur soit connecté.</li>
+                        <li><code>$this->middleware('log')->only('index');</code> : Applique le middleware <code>log</code> (qui pourrait, par exemple, enregistrer les accès) <strong>uniquement à la méthode <code>index</code></strong> du contrôleur. Les autres méthodes ne seront pas affectées par ce middleware.</li>
+                        <li><code>$this->middleware('subscribed')->except('store');</code> : Applique le middleware <code>subscribed</code> (qui pourrait vérifier si l'utilisateur est abonné) à <strong>toutes les méthodes du contrôleur, à l'exception de la méthode <code>store</code></strong>. Cela signifie que la méthode <code>store</code> pourra être exécutée sans que l'utilisateur n'ait besoin d'être abonné.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2024 Examen Régional Laravel. Tous droits réservés.</p>
+        </footer>
     </div>
 </body>
-</html> 
+</html>
